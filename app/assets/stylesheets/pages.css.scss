@@ -1,6 +1,12 @@
-$title-size: 32pt;
+$title-size: 25pt;
 
-.code {
+h1 {
+	.special {
+		font-size: $title-size;
+	}
+}
+
+.special {
 	font-size: $title-size;
 }
 
