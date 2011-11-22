@@ -1,0 +1,13 @@
+$title-size: 32pt;
+
+.code {
+	font-size: $title-size;
+}
+
+a {
+ 	.link {
+		color: #ce4dd7;
+		&:hover { color: #ffb3ff; }
+		&:visited { color: #c456cb; }
+	}
+}
