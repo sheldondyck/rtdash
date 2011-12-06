@@ -1,25 +1,26 @@
 = render 'menu'
-.container-fluid
-  .sidebar
-    .well
-      %h5 
-        = latin_sentence 5
-      %ul
-        %li 
-          = link_to latin_sentence(7), '#', :class => 'product_feature_1'
-        %li 
-          = link_to latin_sentence(6), '#', :class => 'product_feature_2'
-        %li 
-          = link_to latin_sentence(9), '#', :class => 'product_feature_3'
-  .content
-    .product_text_1
-      .hero-unit
-        %h2 Hello Product 1
-        .span6
-          %p 
-            = latin_sentence 9
-      .container-fluid
-        .row
+.container
+  .row
+    .span4
+      .sidebar
+        .well
+          %h5 
+            = latin_sentence 3
+          %ul
+            %li 
+              = link_to latin_sentence(7), '#feature_1', :class => 'product_feature_1'
+            %li 
+              = link_to latin_sentence(6), '#feature_2', :class => 'product_feature_2'
+            %li 
+              = link_to latin_sentence(9), '#feature_3', :class => 'product_feature_3'
+    .span12
+      .product_text_1
+        .hero-unit
+          %h2 Hello Product 1
+          .span6
+            %p 
+              = latin_sentence 9
+        .span12
           %h2 
             1
             = latin_sentence 5
@@ -27,14 +28,13 @@
             = latin_paragraph 10
           %p
             = latin_paragraph 20
-    .product_text_2
-      .hero-unit
-        %h2 Hello Product 2
-        .span6
-          %p 
-            = latin_sentence 9
-      .container-fluid
-        .row
+      .product_text_2
+        .hero-unit
+          %h2 Hello Product 2
+          .span6
+            %p 
+              = latin_sentence 9
+        .span12
           %h2 
             2
             = latin_sentence 5
@@ -42,14 +42,15 @@
             = latin_paragraph 10
           %p
             = latin_paragraph 20
-    .product_text_3
-      .hero-unit
-        %h2 Hello Product 3
-        .span6
-          %p 
-            = latin_sentence 9
-      .container-fluid
-        .row
+          %p
+            = latin_paragraph 10
+      .product_text_3
+        .hero-unit
+          %h2 Hello Product 3
+          .span6
+            %p 
+              = latin_sentence 9
+        .span12
           %h2 
             3
             = latin_sentence 5
