@@ -1,8 +1,39 @@
 = render 'menu'
 .container
-  .sidebar
-    .well
-      %h5 sidebar
-  .content
-    %h2 price
+  .banner
+    %h1 Plans and Price
+  .row
+    .span5
+      .plan_box
+        .title
+          %h2 
+            Bronze
+            .price R$ 10,00/mês
+        %hr
+          %p 
+            = latin_sentence 10
+    .span5
+      .plan_box
+        .title
+          %h2 
+            Silver
+            .price R$ 20,00/mês
+        %hr
+          %p 
+            = latin_sentence 10
+    .span5
+      .plan_box
+        .title
+          %h2 
+            Gold
+            .price R$ 30,00/mês
+        %hr
+          %p 
+            = latin_sentence 10
+  .row
+    .span15
+      .enterprise_box
+        .title
+          %h2 
+            Enterprise
 = render 'footer'

@@ -8,6 +8,7 @@ Rtdash::Application.routes.draw do
   match '/company',		:to => 'pages#company'
 
   match '/login',			:to => 'session#login'
+  match '/user/new',	:to => 'session#new'
 
   root								:to => 'pages#home'
 

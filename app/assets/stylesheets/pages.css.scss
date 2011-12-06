@@ -1,6 +1,45 @@
 @import "bootstrap/variables";
+@import "bootstrap/mixins";
 
 $title-size: 25pt;
+
+.banner {
+	padding-top: $topbar_h + 10px;
+}
+
+.price_display {
+	background-color: #f00;
+}
+
+.enterprise_box {
+	background-color: #C7E2C4;
+  padding: 8px 20px 12px;
+	margin: 20px 0px;
+  @include border-radius(7px);
+	@include box-shadow;
+	@include vertical-gradient(#C7E2C4, lighten(#C7E2C4, 10%));
+}
+
+.plan_box {
+	background-color: #C4DCE2;
+	width: 250;
+	height: 250;
+  padding: 8px 20px 12px;
+  @include border-radius(7px);
+	@include box-shadow;
+	@include vertical-gradient(#C4DCE2, lighten(#C4DCE2, 10%));
+	.title {
+		h2 {
+			color: #1A526B;
+  		font-size: 20pt;
+		}
+		.price {
+			float: right;
+			color: #000;
+  		font-size: 15pt;
+		}
+	}
+}
 
 body {
   padding-top: $topbar_h;
