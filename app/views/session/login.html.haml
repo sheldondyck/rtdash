@@ -1,0 +1,24 @@
+-#.alert-message{:class => 'error'}
+-#  %a.close{:href => '#'} x
+-# %p Opps! An error happened with the form
+.logindlg
+  = form_for :session, :url => login_path do |f|
+    .fieldset
+      .legend
+      .em
+        .clearfix 
+          -#.clearfix{:class => 'error'}
+          %label{:for => 'xlInput'}User:
+          .input
+            %input#xlInput{:name => 'user', :type => 'text'} 
+            -#.input#xlInput{:class => 'error', :name => 'user', :type => 'text'} 
+            -#%span.help-inline Invalid user
+        .clearfix
+          %label{:for => 'xlInput'}Password:
+          .input
+            %input{:type => 'password'}
+        .clearfix
+          .input
+            = button_tag "Login", :class => 'btn primary', :disable_with => "Processing ..."
+            -#%button{:disable_with => "Please wait..."} foo
+            -#%input{:type => 'submit', :disable_with => 'Please wait ...'}

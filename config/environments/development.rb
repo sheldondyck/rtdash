@@ -25,6 +25,15 @@ Rtdash::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
+  # Generate digests for assets URLs
+  config.assets.digest = false
+
   # Expands the lines which load the assets
   config.assets.debug = true
+
+	# compress css
+	config.assets.css_compressor = :scss
+
+	# compress js
+	config.assets.js_compressor = :uglifier
 end

@@ -1,6 +1,6 @@
 /*
- *= require_self
- *= require "pages"
  *= require "bootstrap/bootstrap"
+ *= require "pages"
+ *= require "session"
+ *= require_self
 */
-

@@ -2,6 +2,8 @@
  * Variables and mixins to pre-ignite any new web development project
  * ------------------------------------------------------------------ */
 
+// topbar 
+$topbar_h:					40px;
 
 // Links
 $linkColor:         #0069d6;
@@ -16,7 +18,8 @@ $grayLighter:       lighten($black, 90%);
 $white:             #fff;
 
 // Accent Colors
-$blue:              #049CDB;
+//$blue:              #049CDB;
+$blue:              #149CDB;
 $blueDark:          #0064CD;
 $green:             #46a546;
 $red:               #9d261d;

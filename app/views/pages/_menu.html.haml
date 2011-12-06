@@ -1,0 +1,21 @@
+.topbar
+  -#<div class="topbar" data-scrollspy="scrollspy">
+  .topbar-inner
+    .container
+      = link_to 'Real Time Dashboard', home_url, :class => 'brand'
+      %ul.nav
+        %li{:class => active('product')}
+          = link_to 'Product', product_url
+        %li{:class => active('price')}
+          = link_to 'Price', price_url
+        %li{:class => active('blog')}
+          = link_to 'Blog', blog_url
+        %li{:class => active('press')}
+          = link_to 'Press', press_url
+        %li{:class => active('company')}
+          = link_to 'Company', company_url
+      %ul.nav{:class => 'secondary-nav'}
+        %li
+          = link_to 'Login', login_url
+      %p.pull-right
+        Login in as <b>foobar</b>

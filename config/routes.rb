@@ -1,9 +1,15 @@
 Rtdash::Application.routes.draw do
 
-  match '/home',		:to => 'pages#home'
-  match '/about',		:to => 'pages#about'
+  match '/home',			:to => 'pages#home'
+  match '/product',		:to => 'pages#product' 
+  match '/price',			:to => 'pages#price'
+  match '/blog',			:to => 'pages#blog'
+  match '/press',			:to => 'pages#press'
+  match '/company',		:to => 'pages#company'
 
-	root              :to => 'pages#home'
+  match '/login',			:to => 'session#login'
+
+  root								:to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

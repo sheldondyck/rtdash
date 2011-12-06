@@ -27,9 +27,10 @@ body {
   padding-right: 20px;
   @include clearfix();
   > .sidebar {
-    position: absolute;
-    top: 0;
-    left: 20px;
+    //position: absolute;
+    //top: 0;
+		float: left;
+    //left: 20px;
     width: 220px;
   }
   // TODO in v2: rename this and .popover .content to be more specific

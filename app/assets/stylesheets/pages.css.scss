@@ -1,19 +1,33 @@
+@import "bootstrap/variables";
+
 $title-size: 25pt;
 
+body {
+  padding-top: $topbar_h;
+}
+
+.sidebar {
+	padding-top: 90px;
+}
+
 h1 {
-	.special {
-		font-size: $title-size;
-	}
+  .special {
+    font-size: $title-size;
+  }
+}
+
+.join {
+  font-size: 20pt;
 }
 
 .special {
-	font-size: $title-size;
+  font-size: $title-size;
 }
 
 a {
- 	.link {
-		color: #ce4dd7;
-		&:hover { color: #ffb3ff; }
-		&:visited { color: #c456cb; }
-	}
+  .link {
+    color: #ce4dd7;
+    &:hover { color: #ffb3ff; }
+    &:visited { color: #c456cb; }
+  }
 }
