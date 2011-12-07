@@ -3,6 +3,16 @@
 
 $title-size: 25pt;
 
+.hero-unit {
+	#computer-demo {
+		padding: 10px;
+		float: right;
+		position: relative;
+		left: 0px;
+		top: 0px;
+	}
+}
+
 .banner {
 	padding-top: $topbar_h + 10px;
 }
