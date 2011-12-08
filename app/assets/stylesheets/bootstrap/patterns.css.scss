@@ -27,7 +27,7 @@
   h3 a:hover,
   .brand:hover,
   ul .active > a {
-    background-color: #333;
+    background-color: $topbar_bkgrd_color_secondary;
     background-color: rgba(255,255,255,.05);
     color: $white;
     text-decoration: none;
@@ -115,8 +115,8 @@
 // For backwards compatibility, include .topbar .fill
 .topbar-inner,
 .topbar .fill {
-  background-color: #222;
-  @include vertical-gradient(#333, #222);
+  background-color: $topbar_bkgrd_color_primary;
+  @include vertical-gradient($topbar_bkgrd_color_secondary, $topbar_bkgrd_color_primary);
   $shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   @include box-shadow($shadow);
 }
@@ -151,7 +151,7 @@
     }
   }
   .active > a {
-    background-color: #222;
+    background-color: $topbar_bkgrd_color_primary;
     background-color: rgba(0,0,0,.5);
   }
 
@@ -179,7 +179,7 @@
   // .menu-dropdown for backwards compatibility
   .menu-dropdown,
   .dropdown-menu {
-    background-color: #333;
+    background-color: $topbar_bkgrd_color_secondary;
     // a.menu for backwards compatibility
     a.menu,
     .dropdown-toggle {
@@ -201,7 +201,7 @@
       color: $white;
     }
     .divider {
-      background-color: #222;
+      background-color: $topbar_bkgrd_color_primary;
       border-color: #444;
     }
   }
