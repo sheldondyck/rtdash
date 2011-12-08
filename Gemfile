@@ -26,6 +26,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 	gem 'rspec'
+	gem 'webrat'
 end
 
 # Use unicorn as the web server
