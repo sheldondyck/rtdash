@@ -1,29 +1,29 @@
 = render 'menu'
 .container
   .hero-unit
-    %h1.special Hello world!!!
+    %h1.special Hello world!!!!
     = image_tag 'computer-demo.png', :id => 'computer-demo'
     .row
       .span7
         %p 
-          = $p_0
+          = @p_0
       .span3
         %p 
           = link_to 'Join now!', signup_path, :class => 'btn success join'
   .row
     .span5
       %h2 
-        = $sub_title_0
+        = @sub_title_0
       %p
-        = $sub_p_0
+        = @sub_p_0
     .span5
       %h2 
-        = $sub_title_1
+        = @sub_title_1
       %p
-        = $sub_p_1
+        = @sub_p_1
     .span5
       %h2
-        = $sub_title_2
+        = @sub_title_2
       %p
-        = $sub_p_2
+        = @sub_p_2
 = render 'footer'
