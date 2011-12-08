@@ -11,6 +11,8 @@ Rtdash::Application.routes.draw do
 
   match '/login',			:to => 'session#login'
 
+	match '/signup',		:to => 'users#new'
+
   root								:to => 'pages#home'
 
   # The priority is based upon order of creation:
