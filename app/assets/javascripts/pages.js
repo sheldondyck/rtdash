@@ -1,3 +1,4 @@
+// product sidebar nav
 $(document).ready(function() {
 		$("div.product_text_2").hide(); 
 		$("div.product_text_3").hide(); 
@@ -17,3 +18,13 @@ $(document).ready(function() {
 			$("div.product_text_3").show(); 
 		});
 });
+// product popover
+$(function () {
+	$("a[rel=popover]")
+	.popover({
+		offset: 10
+	})
+	.click(function(e) {
+		e.preventDefault()
+	})
+}) 
