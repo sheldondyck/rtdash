@@ -16,16 +16,29 @@ describe PagesController do
 			end
   end
 
-  describe "GET 'product'" do
+  describe "GET 'features'" do
     it "should be successful" do
-      get 'product'
+      get 'features'
       response.should be_success
     end
 
 		it "should have the right title" do
-			get 'product'
+			get 'features'
 			response.should have_selector("title",
-                    :content => "Real Time Dashboard | Product")
+                    :content => "Real Time Dashboard | Features")
+			end
+  end
+
+  describe "GET 'how_does_it_work'" do
+    it "should be successful" do
+      get 'how_does_it_work'
+      response.should be_success
+    end
+
+		it "should have the right title" do
+			get 'how_does_it_work'
+			response.should have_selector("title",
+                    :content => "Real Time Dashboard | How does it work?")
 			end
   end
 
@@ -52,6 +65,19 @@ describe PagesController do
 			get 'blog'
 			response.should have_selector("title",
                     :content => "Real Time Dashboard | Blog")
+			end
+  end
+
+  describe "GET 'support'" do
+    it "should be successful" do
+      get 'support'
+      response.should be_success
+    end
+
+		it "should have the right title" do
+			get 'support'
+			response.should have_selector("title",
+                    :content => "Real Time Dashboard | Support")
 			end
   end
 

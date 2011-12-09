@@ -14,6 +14,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development do
 	gem 'rspec-rails'
+	# default annotate was throwing an exception with rake 0.9
+	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 
 group :assets do

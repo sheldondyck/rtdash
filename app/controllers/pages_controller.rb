@@ -14,8 +14,12 @@ class PagesController < ApplicationController
     @sub_p_2 = @latin.paragraph(3)
   end
 
-  def product
-		@title = 'Product'
+  def features
+		@title = 'Features'
+  end
+
+  def how_does_it_work
+		@title = 'How does it work?'
   end
 
   def price
@@ -24,6 +28,10 @@ class PagesController < ApplicationController
 
   def blog
 		@title = 'Blog'
+  end
+
+  def support
+		@title = 'Support'
   end
 
   def press

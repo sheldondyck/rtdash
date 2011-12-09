@@ -3,9 +3,11 @@ Rtdash::Application.routes.draw do
   get "users/new" #???
 
   match '/home',			:to => 'pages#home'
-  match '/product',		:to => 'pages#product' 
+  match '/features',	:to => 'pages#features' 
+  match '/how_does_it_work',	:to => 'pages#how_does_it_work' 
   match '/price',			:to => 'pages#price'
   match '/blog',			:to => 'pages#blog'
+  match '/support',		:to => 'pages#support'
   match '/press',			:to => 'pages#press'
   match '/company',		:to => 'pages#company'
 

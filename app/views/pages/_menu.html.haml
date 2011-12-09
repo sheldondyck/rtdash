@@ -3,8 +3,10 @@
     .container
       = link_to 'Real Time Dashboard', home_url, :class => 'brand'
       %ul.nav
-        %li{:class => active('product')}
-          = link_to 'Product', product_url
+        %li{:class => active('how_does_it_work')}
+          = link_to 'How does it work?', how_does_it_work_url
+        %li{:class => active('features')}
+          = link_to 'Features', features_url
         %li{:class => active('price')}
           = link_to 'Price', price_url
         %li{:class => active('blog')}
@@ -14,6 +16,8 @@
         %li{:class => active('company')}
           = link_to 'Company', company_url
       %ul.nav{:class => 'secondary-nav'}
+        %li{:class => active('support')}
+          = link_to 'Support', support_url
         %li
           = link_to 'Login', login_url
       -#%p.pull-right
