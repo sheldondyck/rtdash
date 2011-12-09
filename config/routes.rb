@@ -1,21 +1,21 @@
 Rtdash::Application.routes.draw do
+	resources :users
 
-  get "users/new" #???
+	match '/signup',							:to => 'users#new'
 
-  match '/home',			:to => 'pages#home'
-  match '/features',	:to => 'pages#features' 
-  match '/how_does_it_work',	:to => 'pages#how_does_it_work' 
-  match '/price',			:to => 'pages#price'
-  match '/blog',			:to => 'pages#blog'
-  match '/support',		:to => 'pages#support'
-  match '/press',			:to => 'pages#press'
-  match '/company',		:to => 'pages#company'
+  match '/home',								:to => 'pages#home'
+  match '/features',						:to => 'pages#features' 
+  match '/how_does_it_work',		:to => 'pages#how_does_it_work' 
+  match '/price',								:to => 'pages#price'
+  match '/blog',								:to => 'pages#blog'
+  match '/support',							:to => 'pages#support'
+  match '/press',								:to => 'pages#press'
+  match '/company',							:to => 'pages#company'
 
-  match '/login',			:to => 'session#login'
+  match '/login',								:to => 'session#login'
 
-	match '/signup',		:to => 'users#new'
 
-  root								:to => 'pages#home'
+  root													:to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

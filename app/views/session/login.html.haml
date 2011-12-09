@@ -6,13 +6,13 @@
     .fieldset
       .legend
       .em
-        .clearfix 
-          -#.clearfix{:class => 'error'}
+        -#.clearfix 
+        .clearfix{:class => 'error'}
           %label{:for => 'xlInput'}User:
           .input
-            %input#xlInput{:name => 'user', :type => 'text'} 
-            -#.input#xlInput{:class => 'error', :name => 'user', :type => 'text'} 
-            -#%span.help-inline Invalid user
+            -#%input#xlInput{:name => 'user', :type => 'text'} 
+            %input#xlInput{:class => 'error', :name => 'user', :type => 'text'} 
+            %span.help-inline Invalid user
         .clearfix
           %label{:for => 'xlInput'}Password:
           .input
