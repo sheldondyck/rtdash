@@ -9,8 +9,11 @@ module ApplicationHelper
 	end
 
 	def flash_handler
+		div = ""
 		flash.each do |key, value|
-			"<div class=\"flash #{key}\">#{value}</div>"
+			div += "<div class='flash #{key}'>#{value}</div>"
 		end
+
+		div
 	end
 end
