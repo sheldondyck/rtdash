@@ -11,7 +11,7 @@ module ApplicationHelper
 	def flash_handler
 		div = ""
 		flash.each do |key, value|
-			div += "<div class='flash #{key}'>#{value}</div>"
+			div += "<div class='alert-message #{key}'>#{value}</div>"
 		end
 
 		div
