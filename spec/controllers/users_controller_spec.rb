@@ -38,6 +38,11 @@ describe UsersController do
         post :create, :user => @attr
         response.should render_template('new')
       end
+
+      it "should show a alert message" do
+        post :create, :user => @attr
+        response.should have_selector("div", :class => "alert-message error")
+      end
     end
 
 		describe "success" do
@@ -62,6 +67,11 @@ describe UsersController do
         post :create, :user => @attr
         flash[:success].should =~ /Created new user/i
       end
+
+			#it "should have a alert message" do
+        #post :create, :user => @attr
+        #response.should have_selector("div", :class => "alert-message success")
+      #end
     end
   end
 end

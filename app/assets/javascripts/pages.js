@@ -28,3 +28,11 @@ $(function () {
 		e.preventDefault()
 	})
 }) 
+// alert
+$(document).ready(function() {
+  if ($("div.alert-message").is(":visible")) {
+    $("div.alert-message").hide();
+    $("div.alert-message").slideDown("slow");
+  }
+})
+

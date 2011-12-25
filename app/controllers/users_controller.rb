@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   def new
 		@user = User.new
 		@title = "Sign Up"
-    flash[:success] = "foo new user"
   end
 
 	def create
@@ -12,9 +11,10 @@ class UsersController < ApplicationController
 			flash[:success] = "Created new user"
 			redirect_to @user
 		else
-			flash[:success] = "foo new user"
+			flash[:error] = "Please fix the problems with the form"
 			@title = "Sign up"
 			render 'new'
+			flash.discard(:error)
 		end
 	end
 
