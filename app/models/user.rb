@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
 		end
 
 		def make_salt
-			rand 0..4611686018427387904
+			rand 0..999999999
 		end
 
 		def secure_hash(value)
