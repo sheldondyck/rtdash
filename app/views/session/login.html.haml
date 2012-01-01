@@ -1,3 +1,4 @@
+= render 'pages/menu'
 -#.alert-message{:class => 'error'}
 -#  %a.close{:href => '#'} x
 -# %p Opps! An error happened with the form
@@ -7,12 +8,12 @@
       .legend
       .em
         -#.clearfix 
-        .clearfix{:class => 'error'}
+        .clearfix
           %label{:for => 'xlInput'}User:
           .input
-            -#%input#xlInput{:name => 'user', :type => 'text'} 
-            %input#xlInput{:class => 'error', :name => 'user', :type => 'text'} 
-            %span.help-inline Invalid user
+            %input#xlInput{:name => 'user', :type => 'text'} 
+            -#%input#xlInput{:class => 'error', :name => 'user', :type => 'text'} 
+            -#%span.help-inline Invalid user
         .clearfix
           %label{:for => 'xlInput'}Password:
           .input
