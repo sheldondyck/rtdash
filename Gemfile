@@ -5,7 +5,6 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'therubyracer'
 gem 'haml'
 gem 'faker'
@@ -13,6 +12,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development do
+  gem 'sqlite3'
 	gem 'rspec-rails'
 	# default annotate was throwing an exception with rake 0.9
 	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
@@ -25,6 +25,7 @@ group :assets do
 end
 
 group :test do
+  gem 'sqlite3'
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 	gem 'rspec'
