@@ -20,6 +20,7 @@ describe "Users" do
     end
 
     describe "success" do
+
       it "should make a new user" do
         lambda do
           visit signup_path
