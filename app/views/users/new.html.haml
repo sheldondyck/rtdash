@@ -1,32 +1,27 @@
 = render 'pages/menu'
 .container
-  %h2 Sign up
-  = form_for(@user) do |f|
+  = form_for @user, :html => {:class => 'form-horizontal' } do |f|
     .fieldset
-      .legend
-      .em
-        .clearfix{:class => user_error_class(@user, :name)}
-          = f.label :name
-          .input
-            = f.text_field :name
-            %span.help-inline 
-              = user_error_message(@user, :name)
-        .clearfix{:class => user_error_class(@user, :email)}
-          = f.label :email
-          .input
-            = f.text_field :email
-            %span.help-inline 
-              = user_error_message(@user, :email)
-            -#%input#xlInput{:name => 'email', :type => 'text'} 
-            -#.input#xlInput{:class => 'error', :name => 'user', :type => 'text'} 
-            -#%span.help-inline Invalid user
-        .clearfix{:class => user_error_class(@user, :password)}
-          = f.label :password
-          .input
-            = f.password_field :password
-            %span.help-inline 
-              = user_error_message(@user, :password)
-            -#%input{:type => 'password'}
-        .clearfix
-          .input
-            = button_tag "Create", :class => 'btn primary', :disable_with => "Processing ..."
+      %legend Sign up
+      .control-group{:class => user_error_class(@user, :name)}
+        %label.control-label User
+        .controls
+          %input.input{:name => 'user[name]', :type => 'text'}
+          #span.help-inline
+            = user_error_message(@user, :name)
+      .control-group{:class => user_error_class(@user, :email)}
+        %label.control-label Email
+        .controls
+          %input.input{:name => 'user[email]', :type => 'text', :class => user_error_class(@user, :email)}
+          #span.help-inline
+            = user_error_message(@user, :email)
+      .control-group{:class => user_error_class(@user, :password)}
+        %label.control Password
+        .controls
+          %input.input{:name => 'user[password]', :type => 'password', :class => user_error_class(@user, :password)}
+          #span.help-inline
+            = user_error_message(@user, :password)
+      .control-group
+        %label.control-label
+        .controls
+          = button_tag "Create", :class => 'btn btn-primary', :disable_with => "Processing ..."

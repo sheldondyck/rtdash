@@ -6,6 +6,10 @@ $title-size: 25pt;
 .alert-message {
   border-radius: 0px;
   padding: 0px;
+
+  error {
+    background-color: #f00;
+  }
 }
 
 .hero-unit {
@@ -32,7 +36,7 @@ $title-size: 25pt;
 	margin: 20px 0px;
   @include border-radius(7px);
 	@include box-shadow;
-	@include gradient-vertical-three-colors(#C7E2C4, lighten(#C7E2C4, 10%));
+	@include gradient-vertical(#C7E2C4, lighten(#C7E2C4, 10%));
 }
 
 .plan_box {
@@ -42,7 +46,7 @@ $title-size: 25pt;
   padding: 8px 20px 12px;
   @include border-radius(7px);
 	@include box-shadow;
-	@include gradient-vertical-three-colors(#C4DCE2, lighten(#C4DCE2, 10%));
+	@include gradient-vertical(#C4DCE2, lighten(#C4DCE2, 10%));
 	.title {
 		h2 {
 			color: #1A526B;
@@ -57,7 +61,7 @@ $title-size: 25pt;
 }
 
 body {
-  //padding-top: $navbarHeight;
+  padding-top: $navbarHeight;
 }
 
 .sidebar {

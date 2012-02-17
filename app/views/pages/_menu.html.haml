@@ -1,4 +1,4 @@
-.navbar
+.navbar.navbar-fixed-top
   .navbar-inner{:data => {'scollspy' => 'scollspy'}}
     .container
       = link_to 'Real Time Dashboard', home_url, :class => 'brand'
@@ -15,7 +15,7 @@
           = link_to 'Press', press_url
         %li{:class => active('company')}
           = link_to 'Company', company_url
-      %ul.nav{:class => 'secondary-nav'}
+      %ul.nav{:class => 'pull-right'}
         %li{:class => active('support')}
           = link_to 'Support', support_url
         %li
