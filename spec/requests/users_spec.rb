@@ -14,7 +14,7 @@ describe "Users" do
           fill_in "user[password]",     :with => ""
           click_button
           response.should render_template('users/new')
-          response.should have_selector('div.alert-message.error')
+          response.should have_selector('div.alert-error')
         end.should_not change(User, :count)
       end
     end
@@ -28,7 +28,7 @@ describe "Users" do
           fill_in "user[email]",        :with => "user@example.com"
           fill_in "user[password]",     :with => "foobar"
           click_button
-          response.should have_selector("div.alert-message.success")
+          response.should have_selector("div.alert-success")
           response.should render_template('users/show')
         end.should change(User, :count).by(1)
       end

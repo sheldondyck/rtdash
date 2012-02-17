@@ -41,7 +41,7 @@ describe UsersController do
 
       it "should show a alert message" do
         post :create, :user => @attr
-        response.should have_selector("div", :class => "alert-message error")
+        response.should have_selector("div", :class => "alert alert-error")
       end
     end
 

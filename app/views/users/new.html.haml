@@ -1,24 +1,24 @@
 = render 'pages/menu'
 .container
-  = form_for @user, :html => {:class => 'form-horizontal' } do |f|
+  = form_for @user, :html => {:class => 'form-horizontal'} do |f|
     .fieldset
       %legend Sign up
       .control-group{:class => user_error_class(@user, :name)}
         %label.control-label User
         .controls
-          %input.input{:name => 'user[name]', :type => 'text'}
+          %input.input{:type => 'text', :name => 'user[name]', :value => @user[:name]}
           #span.help-inline
             = user_error_message(@user, :name)
       .control-group{:class => user_error_class(@user, :email)}
         %label.control-label Email
         .controls
-          %input.input{:name => 'user[email]', :type => 'text', :class => user_error_class(@user, :email)}
+          %input.input{:type => 'text', :name => 'user[email]', :value => @user[:email]}
           #span.help-inline
             = user_error_message(@user, :email)
       .control-group{:class => user_error_class(@user, :password)}
         %label.control Password
         .controls
-          %input.input{:name => 'user[password]', :type => 'password', :class => user_error_class(@user, :password)}
+          %input.input{:type => 'password', :name => 'user[password]', :value => @user[:password]}
           #span.help-inline
             = user_error_message(@user, :password)
       .control-group

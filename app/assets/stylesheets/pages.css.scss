@@ -3,13 +3,10 @@
 
 $title-size: 25pt;
 
-.alert-message {
+.alert-error {
   border-radius: 0px;
-  padding: 0px;
-
-  error {
-    background-color: #f00;
-  }
+  padding: 10px;
+  //visibility: hidden; 
 }
 
 .hero-unit {
