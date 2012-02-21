@@ -30,9 +30,9 @@ $(function () {
 }) 
 // alert
 $(document).ready(function() {
-  if ($("div.alert-message").is(":visible")) {
-    $("div.alert-message").hide();
-    $("div.alert-message").slideDown("slow");
-  }
+//  if ( !$("div.alert-error").is(":visible")) {
+ //   $("div.alert-error").show();
+  //  $("div.alert-error").slideDown("slow");
+//  }
 })
 

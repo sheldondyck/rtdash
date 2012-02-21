@@ -4,15 +4,21 @@ describe "LayoutLinks" do
 
 	it "should have a Home page at '/'" do
 		get '/'
+    response.should be_success
 		response.should have_selector('title', :content => "Home")
 	end
+
+	#it "should have a stylesheet page at '/assets/application.css'" do
+	#	get '/assets/application.css'
+	#	response.should have_selector('title', :content => "Home")
+	#end
 
 	it "should have a Product page at '/features'" do
 		get '/features'
 		response.should have_selector('title', :content => "Features")
 	end
 
-	it "should have a Product page at '/how_does_it_work'" do
+	it "should have a 'How does it work page' at '/how_does_it_work'" do
 		get '/how_does_it_work'
 		response.should have_selector('title', :content => "How does it work?")
 	end
@@ -27,7 +33,7 @@ describe "LayoutLinks" do
 		response.should have_selector('title', :content => "Blog")
 	end
 
-	it "should have a Blog page at '/support'" do
+	it "should have a Support page at '/support'" do
 		get '/support'
 		response.should have_selector('title', :content => "Support")
 	end
@@ -37,7 +43,7 @@ describe "LayoutLinks" do
 		response.should have_selector('title', :content => "Press")
 	end
 
-	it "should have a Product page at '/Company'" do
+	it "should have a Company page at '/company'" do
 		get '/company'
 		response.should have_selector('title', :content => "Company")
 	end

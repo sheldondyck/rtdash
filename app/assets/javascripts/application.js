@@ -7,14 +7,18 @@
 //= require jquery
 //= require jquery_ujs
 //
-//= require 'bootstrap/bootstrap-twipsy.js'
-//= require 'bootstrap/bootstrap-alerts.js'
-//= require 'bootstrap/bootstrap-buttons.js'
-//= require 'bootstrap/bootstrap-dropdown.js'
-//= require 'bootstrap/bootstrap-modal.js'
+//= require 'bootstrap/bootstrap-tooltip.js'
 //= require 'bootstrap/bootstrap-popover.js'
 //= require 'bootstrap/bootstrap-scrollspy.js'
-//= require 'bootstrap/bootstrap-tabs.js'
+//= require 'bootstrap/bootstrap-alert.js'
+//= require 'bootstrap/bootstrap-button.js'
+//= require 'bootstrap/bootstrap-carousel.js'
+//= require 'bootstrap/bootstrap-collapse.js'
+//= require 'bootstrap/bootstrap-dropdown.js'
+//= require 'bootstrap/bootstrap-modal.js'
+//= require 'bootstrap/bootstrap-tab.js'
+//= require 'bootstrap/bootstrap-transition.js'
+//= require 'bootstrap/bootstrap-typeahead.js'
 //
 //= require 'pages.js'
 //= require 'session.js'
