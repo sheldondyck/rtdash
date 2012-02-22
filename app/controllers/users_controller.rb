@@ -8,13 +8,13 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params[:user])
 		if @user.save
+      sign_in @user
 			flash[:success] = "Created new user"
 			redirect_to @user
 		else
-			flash[:error] = "Please fix the problems with the form"
+			flash.now[:error] = "Please fix the problems with the form"
 			@title = "Sign up"
 			render 'new'
-			flash.discard(:error)
 		end
 	end
 

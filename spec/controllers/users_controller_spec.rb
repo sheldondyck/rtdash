@@ -3,6 +3,23 @@ require 'spec_helper'
 describe UsersController do
 	render_views
 
+  describe "GET 'show'" do
+
+    before(:each) do
+      @user = Factory(:user)
+    end
+
+    it "should be successful" do
+      get :show, :id => @user
+      response.should be_success
+    end
+
+    it "should find the right user" do
+      get :show, :id => @user
+      assigns(:user).should == @user
+    end
+  end
+
   describe "GET 'new'" do
     it "returns http success" do
       get 'new'
@@ -66,6 +83,11 @@ describe UsersController do
 			it "should have a welcome message" do
         post :create, :user => @attr
         flash[:success].should =~ /Created new user/i
+      end
+
+      it "should sign the user in" do
+        post :create, :user => @attr
+        controller.should be_signed_in
       end
 
 			#it "should have a alert message" do
