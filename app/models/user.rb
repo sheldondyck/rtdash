@@ -2,18 +2,19 @@
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  password   :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  encrypted_password :string(255)
+#  created_at         :datetime        not null
+#  updated_at         :datetime        not null
+#  salt               :string(255)
 #
 
 require 'digest'
 
 class User < ActiveRecord::Base
-	attr_accessor :password_plain
+	attr_accessor :password
 	attr_accessible :name, :email, :password
  
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -29,11 +30,12 @@ class User < ActiveRecord::Base
 	before_save :encrypt_password
 
 	def has_password?(submitted_password)
-		password == encrypt(submitted_password)
+		encrypted_password == encrypt(submitted_password)
 	end
 
 	def self.authenticate(email, submitted_password)
 		user = find_by_email(email)
+
 		return nil if user.nil?
 		return user if user.has_password?(submitted_password)
 	end
@@ -46,7 +48,7 @@ class User < ActiveRecord::Base
 	private
 		def encrypt_password
 			self.salt = make_salt unless has_password?(password)
-			self.password = encrypt(password)
+			self.encrypted_password = encrypt(password)
 		end
 
 		def encrypt(plain_text)
