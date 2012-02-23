@@ -1,7 +1,10 @@
 Rtdash::Application.routes.draw do
 	resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
 	match '/signup',							:to => 'users#new'
+  match '/login',								:to => 'sessions#new'
+  match '/logout',							:to => 'sessions#destroy'
 
   match '/home',								:to => 'pages#home'
   match '/features',						:to => 'pages#features' 
@@ -11,9 +14,6 @@ Rtdash::Application.routes.draw do
   match '/support',							:to => 'pages#support'
   match '/press',								:to => 'pages#press'
   match '/company',							:to => 'pages#company'
-
-  match '/login',								:to => 'session#login'
-
 
   root													:to => 'pages#home'
 

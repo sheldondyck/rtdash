@@ -1,15 +1,16 @@
+!= flash_handler
 .logindlg
-  = form_for :session, :url => login_path, :html => {:class => 'form-horizontal' } do |f|
+  = form_for :session, :url => sessions_path, :html => {:class => 'form-horizontal' } do |f|
     .fieldset
       %legend Login
       .control-group
         %label.control-label User
         .controls
-          %input.input{:name => 'user', :type => 'text'}
+          = f.text_field :email, :class => 'input'
       .control-group
         %label.control-label Password
         .controls
-          %input.input{:type => 'password'}
+          = f.password_field :password, :class => 'input'
       .control-group
         %label.control-label
         .controls

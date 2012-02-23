@@ -8,15 +8,15 @@ module ApplicationHelper
 		end
 	end
 
-	def flash_handler
-		div = ""
-		flash.each do |key, value|
-			div += "<div class='alert alert-#{key}'>"
+  def flash_handler
+    div = ""
+    flash.each do |key, value|
+      div += "<div class='alert alert-#{key}' data-dismiss='alert'>"
       div += "<div class='container'>"
-			div += "#{value}"
+      div += "<strong>#{value}</strong>"
+      div += "<a style='right: 0px;' class='close' data-dismiss='alert'>&times;</a>"
       div += "</div></div>"
-		end
-
-		div
-	end
+    end
+    div
+  end
 end

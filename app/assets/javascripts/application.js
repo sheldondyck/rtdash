@@ -21,7 +21,7 @@
 //= require 'bootstrap/bootstrap-typeahead.js'
 //
 //= require 'pages.js'
-//= require 'session.js'
+//= require 'sessions.js'
 //
 //= require_self
 
