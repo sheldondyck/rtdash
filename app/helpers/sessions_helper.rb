@@ -2,6 +2,12 @@ module SessionsHelper
 	
 	def sign_in(user)
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
+    #logger.debug "SIGN_IN #{cookies.permanent.signed[:remember_token].inspect}"
+    #logger.debug "SIGN_IN #{user.inspect}"
+    #logger.debug "SIGN_IN #{remember_token.inspect}"
+    #logger.debug "SIGN_IN #{session.inspect}"
+    #logger.debug "SIGN_IN #{cookies.inspect}"
+
     self.current_user = user
 	end
 

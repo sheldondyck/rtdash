@@ -7,13 +7,15 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(params[:user])
+    #logger.debug "SIGN_IN create #{@user.inspect}"
+    #logger.debug "SIGN_IN create #{cookies.inspect}"
 		if @user.save
       sign_in @user
 			flash[:success] = "Created new user"
 			redirect_to @user
 		else
-			flash.now[:error] = "Please fix the problems with the form"
 			@title = "Sign up"
+			flash.now[:error] = "Please fix the problems with the form"
 			render 'new'
 		end
 	end
