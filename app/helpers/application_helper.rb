@@ -13,7 +13,7 @@ module ApplicationHelper
     flash.each do |key, value|
       div += "<div class='alert alert-#{key}' data-dismiss='alert'>"
       div += "<div class='container'>"
-      div += "#{value}"
+      div += "<strong>#{value}</strong>"
       div += "<a style='right: 0px;' class='close' data-dismiss='alert'>&times;</a>"
       div += "</div></div>"
     end
