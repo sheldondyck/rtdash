@@ -23,16 +23,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @title = "User"
+    @title = "User " + @user.name
   end
 
   private
-  def authenticate
-    deny_access unless signed_in?
-  end
 
-  def authorize
-    @user = User.find(params[:id])
-    redirect_to(root_path) unless current_user?(@user)
-  end
+    def authorize
+     @user = User.find(params[:id])
+     redirect_to(root_path) unless current_user?(@user)
+    end
 end
