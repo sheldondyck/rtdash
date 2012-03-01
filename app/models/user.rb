@@ -45,20 +45,20 @@ class User < ActiveRecord::Base
   end
 
   private
-  def encrypt_password
-    self.salt = make_salt unless has_password?(password)
-    self.encrypted_password = encrypt(password)
-  end
+    def encrypt_password
+      self.salt = make_salt unless has_password?(password)
+      self.encrypted_password = encrypt(password)
+    end
 
-  def encrypt(plain_text)
-    secure_hash("#{salt}--#{plain_text}")
-  end
+    def encrypt(plain_text)
+      secure_hash("#{salt}--#{plain_text}")
+    end
 
-  def make_salt
-    secure_hash("#{rand 999999999}")
-  end
+    def make_salt
+      secure_hash("#{rand 999999999}")
+    end
 
-  def secure_hash(value)
-    Digest::SHA2.hexdigest(value)
-  end
+    def secure_hash(value)
+      Digest::SHA2.hexdigest(value)
+    end
 end

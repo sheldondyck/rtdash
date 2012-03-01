@@ -1,11 +1,7 @@
 module SessionsHelper
 
   def sign_in(user)
-    #cookies.delete(:remember_token)
-    logger.debug "SIGN_IN #{user.inspect}"
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
-    #logger.debug "SIGN_IN #{cookies.permanent.signed[:remember_token].inspect}"
-    #logger.debug "SIGN_IN #{remember_token.inspect}"
     #logger.debug "SIGN_IN #{session.inspect}"
     #logger.debug "SIGN_IN #{cookies.inspect}"
 

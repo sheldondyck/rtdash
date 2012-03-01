@@ -15,30 +15,30 @@ class PagesController < ApplicationController
   end
 
   def features
-		@title = 'Features'
+    @title = 'Features'
   end
 
   def how_does_it_work
-		@title = 'How does it work?'
+    @title = 'How does it work?'
   end
 
   def price
-		@title = 'Price'
+    @title = 'Price'
   end
 
   def blog
-		@title = 'Blog'
+    @title = 'Blog'
   end
 
   def support
-		@title = 'Support'
+    @title = 'Support'
   end
 
   def press
-		@title = 'Press'
+    @title = 'Press'
   end
 
   def company
-		@title = 'Company'
+    @title = 'Company'
   end
 end

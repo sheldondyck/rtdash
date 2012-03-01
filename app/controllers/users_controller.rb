@@ -9,8 +9,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    #logger.debug "SIGN_IN create #{@user.inspect}"
-    #logger.debug "SIGN_IN create #{cookies.inspect}"
     if @user.save
       sign_in @user
       flash[:success] = "Created new user"
