@@ -16,7 +16,7 @@
           #span.help-inline
             = user_error_message(@user, :email)
       .control-group{:class => user_error_class(@user, :password)}
-        %label.control Password
+        %label.control-label Password
         .controls
           %input.input{:type => 'password', :name => 'user[password]', :value => @user[:password]}
           #span.help-inline
