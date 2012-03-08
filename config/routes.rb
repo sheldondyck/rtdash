@@ -1,6 +1,10 @@
 Rtdash::Application.routes.draw do
+
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+
+  resources :chat
+  match '/chat/new',            :to => 'chat#new'
 
   match '/signup',              :to => 'users#new'
   match '/login',               :to => 'sessions#new'
