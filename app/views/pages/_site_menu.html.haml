@@ -1,27 +1,29 @@
 .navbar.navbar-fixed-top
   .navbar-inner{:data => {'scollspy' => 'scollspy'}}
     .container
-      = link_to 'Real Time Dashboard', home_url, :class => 'brand'
-      %ul.nav
-        %li{:class => active('how_does_it_work')}
-          = link_to 'How does it work?', how_does_it_work_url
-        %li{:class => active('features')}
-          = link_to 'Features', features_url
-        %li{:class => active('price')}
-          = link_to 'Price', price_url
-        %li{:class => active('blog')}
-          = link_to 'Blog', blog_url
-        %li{:class => active('press')}
-          = link_to 'Press', press_url
-        %li{:class => active('company')}
-          = link_to 'Company', company_url
-      %ul.nav{:class => 'pull-right'}
-        %li{:class => active('support')}
-          = link_to 'Support', support_url
-        %li
-          - if signed_in?
-            = link_to 'Logout ' + current_user.name, logout_url, :method => :delete
-          - else
-            = link_to 'Login', login_url
+      %h4
+        = link_to image_tag 'rtd-logo-menubar.png', :class => 'brand'
+        = link_to 'Real Time Dashboard', home_url, :class => 'brand'
+        %ul.nav
+          %li{:class => active('how_does_it_work')}
+            = link_to 'How does it work?', how_does_it_work_url
+          %li{:class => active('features')}
+            = link_to 'Features', features_url
+          %li{:class => active('price')}
+            = link_to 'Price', price_url
+          %li{:class => active('blog')}
+            = link_to 'Blog', blog_url
+          %li{:class => active('press')}
+            = link_to 'Press', press_url
+          %li{:class => active('company')}
+            = link_to 'Company', company_url
+        %ul.nav{:class => 'pull-right'}
+          %li{:class => active('support')}
+            = link_to 'Support', support_url
+          %li
+            - if signed_in?
+              = link_to 'Logout ' + current_user.name, logout_url, :method => :delete
+            - else
+              = link_to 'Login', login_url
 .navbar-spacer
 != flash_handler

@@ -3,6 +3,22 @@
 
 $title-size: 25pt;
 
+.footer {
+    border-top-color: #E5E5E5;
+    border-top-style: solid;
+    border-top-width: 1px;
+    margin-top: 45px;
+    padding-bottom: 36px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 35px;
+    background-color: #eee;
+}
+
+.hero-unit#home {
+  margin: 30px 0px;
+}
+
 .alert-error {
   border-radius: 0px;
   padding: 10px;
@@ -88,7 +104,8 @@ a {
 }
 
 .debug_dump {
-  position: absolute;
+  font-size: 8pt;
+  position: fixed;
   width: 400px;
   right: 0px;
   bottom: 0px;
