@@ -48,7 +48,7 @@ describe "Users" do
 
       describe "success" do
         it "should sign a user in and out" do
-          user = Factory(:user)
+          user = FactoryGirl.create(:user)
           visit login_path
           fill_in "session[email]",    :with => user.email
           fill_in "session[password]", :with => user.password
