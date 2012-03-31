@@ -6,7 +6,7 @@ describe UsersController do
   describe "GET 'show'" do
 
     before(:each) do
-      @user = test_sign_in(Factory(:user))
+      @user = test_sign_in(FactoryGirl.create(:user))
     end
 
     it "should be successful" do
@@ -100,7 +100,7 @@ describe UsersController do
   describe "authentication of show page" do
 
     before(:each) do
-      @user = Factory(:user)
+      @user = FactoryGirl.create(:user)
     end
 
     describe "for non-signed-in users" do
@@ -114,7 +114,7 @@ describe UsersController do
     describe "for signed-in users" do
 
       before(:each) do
-        wrong_user = Factory(:user, :email => "user@example.net")
+        wrong_user = FactoryGirl.create(:user, :email => "user@example.net")
         test_sign_in(wrong_user)
       end
 
