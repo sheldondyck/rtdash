@@ -10,6 +10,7 @@ gem 'haml'
 gem 'faker'
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
+gem 'foreigner'
 
 group :development do
   gem 'sqlite3'
