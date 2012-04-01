@@ -24,11 +24,12 @@ ActiveRecord::Schema.define(:version => 20120401150450) do
   add_index "chats", ["user_id"], :name => "index_chats_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "name",                :null => false
-    t.string   "email",               :null => false
-    t.string   "encrypted_password",  :null => false
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
-    t.string   "salt",                :null => false
+    t.string   "name"
+    t.string   "email"
+    t.string   "encrypted_password"
+    t.string   "salt"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
+
 end
