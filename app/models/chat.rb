@@ -15,9 +15,15 @@ class Chat < ActiveRecord::Base
 
   attr_accessible :instant, :message
 
-  validates :message,      :presence => true
+  validates :user_id,   :presence => true
+  validates :message,   :presence => true,
+                        :length => { :minimum => 2, :maximum => 255 }
 
   before_create :set_defaults
+
+  def format_instant
+    instant.to_s(:long)
+  end
 
   private
     def set_defaults
