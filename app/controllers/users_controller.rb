@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
   def show
     @title = "User " + @user.name
+    @chat = @user.chat.all
   end
 
   private

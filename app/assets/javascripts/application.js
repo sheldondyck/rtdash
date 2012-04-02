@@ -22,6 +22,7 @@
 //
 //= require 'pages.js'
 //= require 'sessions.js'
+//= require 'users.js'
 //
 //= require_self
 

@@ -5,6 +5,9 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+gem 'faye'
+#gem 'thin'
+
 gem 'therubyracer'
 gem 'haml'
 gem 'faker'
@@ -23,10 +26,8 @@ group :development do
   gem 'guard-spork'
 end
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+group :production do
+  gem 'pg'
 end
 
 group :test do
@@ -42,8 +43,10 @@ group :test do
   gem 'factory_girl_rails'
 end
 
-group :production do
-  gem 'pg'
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 # Use unicorn as the web server

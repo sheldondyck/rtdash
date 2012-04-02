@@ -3,17 +3,19 @@
 # Table name: users
 #
 #  id                 :integer         not null, primary key
-#  name               :string(255)
-#  email              :string(255)
-#  encrypted_password :string(255)
+#  name               :string(255)     not null
+#  email              :string(255)     not null
+#  encrypted_password :string(255)     not null
+#  salt               :string(255)     not null
 #  created_at         :datetime        not null
 #  updated_at         :datetime        not null
-#  salt               :string(255)
 #
 
 require 'digest'
 
 class User < ActiveRecord::Base
+  has_many :chat, :dependent => :delete_all
+
   attr_accessor :password
   attr_accessible :name, :email, :password
 

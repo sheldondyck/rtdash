@@ -1,3 +1,15 @@
 = render 'user_menu'
 .container
   %h2 USER: #{current_user.name}
+  %table
+    %thead
+      %tr
+        %td Instant
+        %td Message
+    %tbody
+      - @chat.each do |chat|
+        %tr
+          %td
+            = chat.format_instant
+          %td
+            = chat.message
