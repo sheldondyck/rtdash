@@ -22,7 +22,7 @@ class Chat < ActiveRecord::Base
   before_create :set_defaults
 
   def format_instant
-    instant.to_s(:long)
+    instant.to_s(:short)
   end
 
   private
