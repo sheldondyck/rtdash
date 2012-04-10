@@ -1,0 +1,6 @@
+//document.domain="0.0.0.0:3000";
+//alert('hello from rt server!');
+<% broadcast "/chat/message" do %>
+  $("#chat").prepend("<tr><td><%= @chat.format_instant %></td><td><%= @chat.message %></td></tr>");
+<% end %>
+$("#message")[0].reset();

@@ -3,6 +3,9 @@ Rtdash::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
+  # TODO: this is a temp route until the final arq is figured out.
+  match '/chat/message',        :to => 'chat#message'
+
   match '/signup',              :to => 'users#new'
   match '/login',               :to => 'sessions#new'
   match '/logout',              :to => 'sessions#destroy'
