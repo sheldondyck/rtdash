@@ -22,7 +22,8 @@ class UsersController < ApplicationController
 
   def show
     @title = "User " + @user.name
-    @chat = @user.chat.all
+    # TODO: problably very inefficient
+    @chat = @user.chat.order(:instant).reverse
   end
 
   private

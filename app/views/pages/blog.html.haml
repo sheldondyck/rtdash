@@ -1,4 +1,20 @@
 = render 'site_menu'
 .container
   %h2 Blog
+  = form_for :chat,
+      :url => "http://0.0.0.0:3000/chat/message",
+      :remote => true,
+      :html => { :class => 'form-horizontal' } do |f|
+    .fieldset
+      %legend Chat
+      %table.table.table-striped
+        %thead
+          %tr
+            %th Instant
+            %th Message
+        %tbody#chat
+      .control-group
+        .controls
+          = f.text_field :message, :class => 'input', :id => 'message'
+          = button_tag "Send", :class => 'btn btn-primary', :disable_with => "Sending ..."
 = render 'footer'
