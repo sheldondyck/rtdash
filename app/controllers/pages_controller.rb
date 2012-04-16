@@ -16,6 +16,11 @@ class PagesController < ApplicationController
 
   def features
     @title = 'Features'
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def how_does_it_work

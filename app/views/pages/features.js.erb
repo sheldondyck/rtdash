@@ -1,0 +1,152 @@
+// product sidebar nav
+$(document).ready(function() {
+  $("a#feature_1").click(function() {
+    $("div.product_text").html("\
+    <div class='hero-unit' id='home'>\
+    <h2>Hello Product 1</h2>\
+    <p>\
+      <%= latin_sentence 9 %>\
+    </p>\
+    </div>\
+    <div class='span8'>\
+    <h2>\
+      <%= latin_sentence 5 %>\
+    </h2>\
+    <p>\
+      <%= latin_paragraph 10 %>\
+    </p>\
+    <p>\
+      <%= latin_paragraph 20 %>\
+    </p>\
+    </div>");
+  });
+  $("a#feature_2").click(function() {
+    $("div.product_text").html("\
+      <div class='product_text_2'>\
+      <h2>Features</h2>\
+      <table class='table table-bordered table-striped'>\
+        <thead>\
+          <tr>\
+            <th>Feature</th>\
+            <th>Bronze</th>\
+            <th>Silver</th>\
+            <th>Gold</th>\
+          </tr>\
+        </thead>\
+        <tbody>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Et consequatur eos repellendus pariatur.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Iusto recusandae voluptatibus eius exercitationem.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+            </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Nam quia maxime corporis ut.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Ducimus libero deleniti quo error.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Cum et tenetur reiciendis nemo.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Dolorum quo et facilis est.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Dolor quibusdam quidem magni est.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Est voluptatibus repellendus quibusdam cum.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+          <tr>\
+            <td>\
+              <a data-content='Aut et assumenda necessitatibus quis.' data-original-title='Consectetur officiis' data-placement='left' href='#' rel='popover'>\
+                Culpa reiciendis voluptatibus aut dolores.\
+              </a>\
+            </td>\
+            <td>X</td>\
+            <td>X</td>\
+            <td>X</td>\
+          </tr>\
+        </tbody>\
+      </table>\
+    </div>\
+  </div>");
+  });
+  $("a#feature_3").click(function() {
+    $("div.product_text").html("\
+    <div class='hero-unit' id='home'>\
+    <h2>Hello Product 3</h2>\
+    <p>\
+      <%= latin_sentence 10 %>\
+    </p>\
+    </div>\
+    <div class='span8'>\
+    <h2>\
+      <%= latin_sentence 20 %>\
+    </h2>\
+    <p>\
+      <%= latin_paragraph 5 %>\
+    </p>\
+    <p>\
+      <%= latin_paragraph 30 %>\
+    </p>\
+    </div>");
+  });
+});
