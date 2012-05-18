@@ -4,15 +4,15 @@
 $title-size: 25pt;
 
 .footer {
-    border-top-color: #E5E5E5;
-    border-top-style: solid;
-    border-top-width: 1px;
-    margin-top: 45px;
-    padding-bottom: 36px;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 35px;
-    background-color: #eee;
+  border-top-color: #E5E5E5;
+  border-top-style: solid;
+  border-top-width: 1px;
+  margin-top: 45px;
+  padding-bottom: 36px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 35px;
+  background-color: #eee;
 }
 
 .hero-unit#home {
@@ -26,51 +26,51 @@ $title-size: 25pt;
 }
 
 .hero-unit {
-	#computer-demo {
-		padding: 10px;
-		float: right;
-		position: relative;
-		left: 0px;
-		top: 0px;
-	}
+  #computer-demo {
+    padding: 10px;
+    float: right;
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
 }
 
 .banner {
-	padding-top: $navbarHeight + 10px;
+  padding-top: $navbarHeight + 10px;
 }
 
 .price_display {
-	background-color: #f00;
+  background-color: #f00;
 }
 
 .enterprise_box {
-	background-color: #C7E2C4;
+  background-color: #C7E2C4;
   padding: 8px 20px 12px;
-	margin: 20px 0px;
+  margin: 20px 0px;
   @include border-radius(7px);
-	@include box-shadow;
-	@include gradient-vertical(#C7E2C4, lighten(#C7E2C4, 10%));
+  @include box-shadow;
+  @include gradient-vertical(#C7E2C4, lighten(#C7E2C4, 10%));
 }
 
 .plan_box {
-	background-color: #C4DCE2;
-	width: 250;
-	height: 250;
+  background-color: #C4DCE2;
+  width: 250;
+  height: 250;
   padding: 8px 20px 12px;
   @include border-radius(7px);
-	@include box-shadow;
-	@include gradient-vertical(#C4DCE2, lighten(#C4DCE2, 10%));
-	.title {
-		h2 {
-			color: #1A526B;
-  		font-size: 20pt;
-		}
-		.price {
-			float: right;
-			color: #000;
-  		font-size: 15pt;
-		}
-	}
+  @include box-shadow;
+  @include gradient-vertical(#C4DCE2, lighten(#C4DCE2, 10%));
+  .title {
+    h2 {
+      color: #1A526B;
+      font-size: 20pt;
+    }
+    .price {
+      float: right;
+      color: #000;
+      font-size: 15pt;
+    }
+  }
 }
 
 .navbar-spacer {
@@ -78,7 +78,7 @@ $title-size: 25pt;
 }
 
 .sidebar {
-	padding-top: 90px;
+  padding-top: 90px;
 }
 
 h1 {
