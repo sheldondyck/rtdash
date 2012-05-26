@@ -21,6 +21,7 @@ group :development do
 	# default annotate was throwing an exception with rake 0.9
 	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 	gem 'spork'
+  gem 'libnotify'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-spork'
@@ -37,6 +38,7 @@ group :test do
 	gem 'rspec'
 	gem 'webrat'
 	gem 'spork'
+  gem 'libnotify'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-spork'
