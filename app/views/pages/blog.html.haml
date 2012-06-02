@@ -16,5 +16,5 @@
       .control-group
         .controls
           = f.text_field :message, :class => 'input', :id => 'message'
-          = button_tag "Send", :class => 'btn btn-primary', :disable_with => "Sending ..."
+          = button_tag "Send", :class => 'btn btn-primary', 'data-disable-with' => "Sending ..."
 = render 'footer'
