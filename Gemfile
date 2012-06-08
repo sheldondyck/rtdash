@@ -17,10 +17,10 @@ gem 'foreigner'
 
 group :development do
   gem 'sqlite3'
-	gem 'rspec-rails'
-	# default annotate was throwing an exception with rake 0.9
-	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
-	gem 'spork'
+  gem 'rspec-rails'
+  # default annotate was throwing an exception with rake 0.9
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'spork'
   gem 'libnotify'
   gem 'guard'
   gem 'guard-rspec'
@@ -35,13 +35,8 @@ group :test do
   gem 'sqlite3'
   # Pretty printed test output
   gem 'turn', '>= 0.8.3', :require => false
-	gem 'rspec'
-	gem 'webrat'
-	gem 'spork'
-  gem 'libnotify'
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'guard-spork'
+  gem 'rspec'
+  gem 'webrat'
   gem 'factory_girl_rails'
 end
 
