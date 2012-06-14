@@ -1,4 +1,7 @@
 = render 'site_menu'
 .container
   %h2 Blog
+  - @blogs.each do |blog|
+    %h2= link_to blog.title, blog_url
+    %p= blog.message
 = render 'footer'

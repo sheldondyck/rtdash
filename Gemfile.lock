@@ -1,8 +1,9 @@
 GIT
-  remote: git://github.com/ctran/annotate_models.git
-  revision: 18cd39ad01829deba5aa34634b8540d6675ab978
+  remote: git://github.com/MrJoy/annotate_models.git
+  revision: f4dfac75f6714ad1ec74b03770337908d2cf34f1
   specs:
-    annotate (2.4.1.beta1)
+    annotate (2.5.0.beta1)
+      rake
 
 GEM
   remote: http://rubygems.org/
@@ -98,7 +99,7 @@ GEM
     json (1.7.3)
     libnotify (0.7.2)
     libv8 (3.3.10.4)
-    listen (0.4.3)
+    listen (0.4.4)
       rb-fchange (~> 0.0.5)
       rb-fsevent (~> 0.9.1)
       rb-inotify (~> 0.8.8)

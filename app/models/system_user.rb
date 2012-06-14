@@ -1,30 +1,29 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: system_users
 #
 #  id                 :integer          not null, primary key
 #  name               :string(255)      not null
-#  email              :string(255)      not null
+#  account            :string(255)      not null
 #  encrypted_password :string(255)      not null
 #  salt               :string(255)      not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #
 
-require 'digest'
-
-class User < ActiveRecord::Base
-  has_many :chats, :dependent => :delete_all
+class SystemUser < ActiveRecord::Base
+  has_many :blogs, :dependent => :delete_all
 
   attr_accessor :password
-  attr_accessible :name, :email, :password
+  attr_accessible :name, :account, :password
 
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  account_regex = /\A[\w+\-._]+/i
 
   validates :name,      :presence => true,
-                        :length => { :minimum => 2, :maximum => 50 }
-  validates :email,     :presence => true,
-                        :format => { :with => email_regex },
+                        :length => { :minimum => 2, :maximum => 50}
+  validates :account,   :presence => true,
+                        :format => { :with => account_regex },
+                        :length => { :minimum => 2, :maximum => 50},
                         :uniqueness => { :case_sensitive => false }
   validates :password,  :presence => true,
                         :length => { :within => 6..50 }
@@ -33,17 +32,6 @@ class User < ActiveRecord::Base
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
-  end
-
-  def self.authenticate(email, submitted_password)
-    user = find_by_email(email)
-    return nil if user.nil?
-    return user if user.has_password?(submitted_password)
-  end
-
-  def self.authenticate_with_salt(id, cookie_salt)
-    user = find_by_id(id)
-    (user && user.salt == cookie_salt) ? user : nil
   end
 
   private
@@ -61,7 +49,6 @@ class User < ActiveRecord::Base
     end
 
     def secure_hash(value)
-      # TODO: start to use bcrypt
       Digest::SHA2.hexdigest(value)
     end
 end

@@ -18,8 +18,7 @@ gem 'foreigner'
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
-  # default annotate was throwing an exception with rake 0.9
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'annotate', :git => 'git://github.com/MrJoy/annotate_models.git'
   gem 'spork'
   gem 'libnotify'
   gem 'guard'

@@ -33,6 +33,7 @@ class PagesController < ApplicationController
 
   def blog
     @title = 'Blog'
+    @blogs = Blog.last(5)
   end
 
   def support

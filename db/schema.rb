@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120401150450) do
+ActiveRecord::Schema.define(:version => 20120608201752) do
+
+  create_table "blogs", :force => true do |t|
+    t.integer  "system_user_id", :null => false
+    t.datetime "instance",       :null => false
+    t.string   "title",          :null => false
+    t.string   "message",        :null => false
+    t.string   "url",            :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "blogs", ["url"], :name => "index_blogs_on_url"
 
   create_table "chats", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -22,6 +34,15 @@ ActiveRecord::Schema.define(:version => 20120401150450) do
   end
 
   add_index "chats", ["user_id"], :name => "index_chats_on_user_id"
+
+  create_table "system_users", :force => true do |t|
+    t.string   "name",               :null => false
+    t.string   "account",            :null => false
+    t.string   "encrypted_password", :null => false
+    t.string   "salt",               :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name",               :null => false

@@ -1,7 +1,11 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
-notification :libnotify, :timeout => 1, :transient => false
+notification :libnotify,
+                :timeout => 3000,
+                :urgency => :normal,
+                :append => true,
+                :transient => false
 
 guard 'rspec', :version => 2, :cli => "--drb" do
   watch(%r{^spec/.+_spec\.rb$})

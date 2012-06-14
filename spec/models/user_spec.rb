@@ -2,13 +2,13 @@
 #
 # Table name: users
 #
-#  id                 :integer         not null, primary key
-#  name               :string(255)     not null
-#  email              :string(255)     not null
-#  encrypted_password :string(255)     not null
-#  salt               :string(255)     not null
-#  created_at         :datetime        not null
-#  updated_at         :datetime        not null
+#  email              :string(255)      not null
+#  encrypted_password :string(255)      not null
+#  id                 :integer          not null, primary key
+#  name               :string(255)      not null
+#  salt               :string(255)      not null
+#  updated_at         :datetime         not null
+#  created_at         :datetime         not null
 #
 
 require 'spec_helper'
@@ -31,13 +31,13 @@ describe User do
   end
 
   it "should require a email" do
-    no_name_user = User.new(@attr.merge(:email => ""))
-    no_name_user.should_not be_valid
+    no_email_user = User.new(@attr.merge(:email => ""))
+    no_email_user.should_not be_valid
   end
 
   it "should require a password" do
-    no_name_user = User.new(@attr.merge(:password => ""))
-    no_name_user.should_not be_valid
+    no_password_user = User.new(@attr.merge(:password => ""))
+    no_password_user.should_not be_valid
   end
 
   it "should reject names that are too long" do

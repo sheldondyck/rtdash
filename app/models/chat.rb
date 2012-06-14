@@ -2,12 +2,12 @@
 #
 # Table name: chats
 #
-#  id         :integer         not null, primary key
-#  user_id    :integer         not null
-#  instant    :datetime        not null
-#  message    :string(255)     not null
-#  created_at :datetime        not null
-#  updated_at :datetime        not null
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  instant    :datetime         not null
+#  message    :string(255)      not null
+#  updated_at :datetime         not null
+#  created_at :datetime         not null
 #
 
 class Chat < ActiveRecord::Base
