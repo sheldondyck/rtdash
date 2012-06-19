@@ -1,18 +1,76 @@
 = render 'site_menu'
 .container
-  .row
-    .span4
-      .sidebar
-        .well
-          %h5
-            = latin_sentence 3
-          %ul
-            %li
-              = link_to latin_sentence(7), '#feature_1', :id => 'feature_1', :remote => true
-            %li
-              = link_to latin_sentence(6), '#feature_2', :id => 'feature_2', :remote => true
-            %li
-              = link_to latin_sentence(9), '#feature_3', :id => 'feature_3', :remote => true
-    .span8
-      .product_text
+  .product_text_2
+    %h2 Features
+    %table.table.table-bordered.table-striped
+      %thead
+        %tr
+          %th Feature
+          %th Bronze
+          %th Silver
+          %th Gold
+      %tbody
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
+        %tr
+          %td
+            %a{:href => '#', :rel => 'popover', :data => { 'original-title' => 'Consectetur officiis', 'content' => 'Aut et assumenda necessitatibus quis.', 'placement' => 'left'}}
+              = latin_sentence 5
+          %td X
+          %td X
+          %td X
 = render 'footer'
