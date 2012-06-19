@@ -5,20 +5,20 @@
         = link_to image_tag 'rtd-logo-menubar.png', :class => 'brand'
         = link_to 'Real Time Dashboard', home_url, :class => 'brand'
         %ul.nav
-          %li{:class => active('how_does_it_work')}
+          %li{:class => active('pages#how_does_it_work')}
             = link_to 'How does it work?', how_does_it_work_url
-          %li{:class => active('features')}
+          %li{:class => active('pages#features')}
             = link_to 'Features', features_url
-          %li{:class => active('price')}
+          %li{:class => active('pages#price')}
             = link_to 'Price', price_url
-          %li{:class => active('blog')}
+          %li{:class => active_controller('blog')}
             = link_to 'Blog', blog_url
-          %li{:class => active('press')}
+          %li{:class => active('pages#press')}
             = link_to 'Press', press_url
-          %li{:class => active('company')}
+          %li{:class => active('pages#company')}
             = link_to 'Company', company_url
         %ul.nav.pull-right
-          %li{:class => active('support')}
+          %li{:class => active('pages#support')}
             = link_to 'Support', support_url
           %li
             - if signed_in?

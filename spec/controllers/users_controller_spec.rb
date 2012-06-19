@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe UsersController do
-	render_views
+  render_views
 
   describe "GET 'show'" do
 
@@ -26,13 +26,13 @@ describe UsersController do
       response.should be_success
     end
 
-		it "should have the right title" do
-			get 'new'
-			response.should have_selector("title", :content => "Sign Up")
-		end
+    it "should have the right title" do
+      get 'new'
+      response.should have_selector("title", :content => "Sign Up")
+    end
   end
 
-	describe "POST 'create'" do
+  describe "POST 'create'" do
 
     describe "failure" do
       
@@ -62,7 +62,7 @@ describe UsersController do
       end
     end
 
-		describe "success" do
+    describe "success" do
     
       before(:each) do
         @attr = { :name => "New User", :email => "user@example.com",
@@ -80,7 +80,7 @@ describe UsersController do
         response.should redirect_to(user_path(assigns(:user)))
       end    
 
-			it "should have a welcome message" do
+      it "should have a welcome message" do
         post :create, :user => @attr
         flash[:success].should =~ /Created new user/i
       end
@@ -90,7 +90,7 @@ describe UsersController do
         controller.should be_signed_in
       end
 
-			#it "should have a alert message" do
+      #it "should have a alert message" do
         #post :create, :user => @attr
         #response.should have_selector("div", :class => "alert-message success")
       #end

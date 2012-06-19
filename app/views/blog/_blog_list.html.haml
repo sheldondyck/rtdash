@@ -1,0 +1,16 @@
+.row
+  .span9
+    - @blogs.each do |blog|
+      .hero-unit
+        %h2= link_to blog.id.to_s + ': ' + blog.title, blog_path(blog.id)
+        %p= blog.message
+        -#%p= blog.to_json
+    .row
+      - if @show_previous_blog then
+        .span2
+          = link_to raw('<i class="icon-arrow-left"></i> ') + 'Older Posts', previous_blog_path(@offset), :class => 'btn btn-large'
+      - if @show_next_blog then
+        .span2.offset5
+          = link_to raw('Newer Posts') + raw(' <i class="icon-arrow-right"></i>'), next_blog_path(@offset), :class => 'btn btn-large'
+  .span3
+    %h3 Highlighted Posts

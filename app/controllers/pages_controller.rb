@@ -31,11 +31,6 @@ class PagesController < ApplicationController
     @title = 'Price'
   end
 
-  def blog
-    @title = 'Blog'
-    @blogs = Blog.last(5)
-  end
-
   def support
     @title = 'Support'
   end

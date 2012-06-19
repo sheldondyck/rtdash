@@ -10,6 +10,5 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe BlogsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe BlogHelper do
 end
