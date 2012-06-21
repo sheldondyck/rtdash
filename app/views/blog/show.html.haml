@@ -6,4 +6,6 @@
       %p= @blog.message
     .span3
       %h3 Previous Posts
+      - @prev_blog.each do |p|
+        %h4= link_to p.title, blog_path(p.id)
 = render 'pages/footer'

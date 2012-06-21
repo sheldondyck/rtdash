@@ -15,6 +15,10 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'foreigner'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
@@ -26,15 +30,11 @@ group :development do
   gem 'guard-spork'
 end
 
-group :production do
-  gem 'pg'
-end
-
 group :test do
   gem 'sqlite3'
   # Pretty printed test output
   gem 'turn', '>= 0.8.3', :require => false
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'webrat'
   gem 'factory_girl_rails'
 end

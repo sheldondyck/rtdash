@@ -53,6 +53,11 @@ describe BlogController do
       response.should have_selector("p",
                     :content => @blog.message)
     end
+
+    it "should have the right previous content" do
+      pending("TODO")
+      this.should_not be_a_failure
+    end
   end
 
   describe "GET 'previous'" do

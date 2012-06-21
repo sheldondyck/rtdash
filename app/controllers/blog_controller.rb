@@ -1,6 +1,7 @@
 
 class BlogController < ApplicationController
   BLOG_LIST_COUNT = 10
+  BLOG_PREVIOUS_LIST_COUNT = 5
 
   def new
   end
@@ -37,6 +38,9 @@ class BlogController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+    @prev_blog = Blog.last(BLOG_PREVIOUS_LIST_COUNT + 1)
+    @prev_blog.delete(@blog)
+    @prev_blog = @prev_blog.first(BLOG_PREVIOUS_LIST_COUNT).reverse
     @title = 'Blog - ' + @blog.title
   end
 
