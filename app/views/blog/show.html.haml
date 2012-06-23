@@ -2,10 +2,10 @@
 .container
   .row
     .span9
-      %h2= @blog.title
+      %h2= @blog.id.to_s + ': ' + @blog.title
       %p= @blog.message
     .span3
       %h3 Previous Posts
       - @prev_blog.each do |p|
-        %h4= link_to p.title, blog_path(p.id)
+        %h4= link_to p.id.to_s + ': ' + p.title, blog_path(p.id)
 = render 'pages/footer'
