@@ -55,8 +55,17 @@ describe BlogController do
     end
 
     it "should have the right previous content" do
-      pending("TODO")
-      this.should_not be_a_failure
+      get :show, :id => @blog
+      @blog_last = Blog.last
+      response.should have_selector("h4",
+                    :content => @blog_last.title)
+    end
+
+    it "previous content should not have current post" do
+      @blog_last = Blog.last
+      get :show, :id => @blog_last.id
+      response.should_not have_selector("h4",
+                    :content => @blog_last.title)
     end
   end
 

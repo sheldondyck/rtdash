@@ -38,9 +38,9 @@ class BlogController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
-    @prev_blog = Blog.last(BLOG_PREVIOUS_LIST_COUNT + 1)
+    @prev_blog = Blog.last(BLOG_PREVIOUS_LIST_COUNT + 1).reverse
     @prev_blog.delete(@blog)
-    @prev_blog = @prev_blog.first(BLOG_PREVIOUS_LIST_COUNT).reverse
+    @prev_blog = @prev_blog.first(BLOG_PREVIOUS_LIST_COUNT)
     @title = 'Blog - ' + @blog.title
   end
 
