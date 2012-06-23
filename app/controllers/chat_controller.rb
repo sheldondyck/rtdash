@@ -7,7 +7,7 @@ class ChatController < ApplicationController
     @user = find_user
 
     if validate_user_key(user_key) then
-      @chat = @user.chat.new(params[:chat])
+      @chat = @user.chats.new(params[:chat])
       @chat.save
 
       respond_to do |format|
