@@ -1,4 +1,3 @@
-
 class BlogController < ApplicationController
   BLOG_LIST_COUNT = 10
   BLOG_PREVIOUS_LIST_COUNT = 5
