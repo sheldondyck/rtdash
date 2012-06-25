@@ -57,14 +57,14 @@ describe BlogController do
     it "should have the right previous content" do
       get :show, :id => @blog
       @blog_last = Blog.last
-      response.should have_selector("h4",
+      response.should have_selector("li",
                     :content => @blog_last.title)
     end
 
     it "previous content should not have current post" do
       @blog_last = Blog.last
       get :show, :id => @blog_last.id
-      response.should_not have_selector("h4",
+      response.should_not have_selector("li",
                     :content => @blog_last.title)
     end
   end
