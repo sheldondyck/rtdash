@@ -17,7 +17,7 @@ class SystemUser < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :account, :password
 
-  account_regex = /\A[\w+\-._]+/i
+  account_regex = /\A[a-z][a-z0-9\-\._]+\z/i
 
   validates :name,      :presence => true,
                         :length => { :minimum => 2, :maximum => 50}
@@ -32,6 +32,17 @@ class SystemUser < ActiveRecord::Base
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
+  end
+
+  def self.authenticate(account, submitted_password)
+    sys_user = find_by_account(account)
+    return nil if sys_user.nil?
+    return sys_user if sys_user.has_password?(submitted_password)
+  end
+
+  def self.authenticate_with_salt(id, cookie_salt)
+    sys_user = find_by_id(id)
+    (sys_user && sys_user.salt == cookie_salt) ? sys_user : nil
   end
 
   private
@@ -49,6 +60,7 @@ class SystemUser < ActiveRecord::Base
     end
 
     def secure_hash(value)
+      # TODO: start to use bcrypt
       Digest::SHA2.hexdigest(value)
     end
 end
