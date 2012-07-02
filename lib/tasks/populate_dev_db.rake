@@ -45,7 +45,9 @@ def make_blogs
     50.times do |n|
       blog_attr = {
             :title => Faker::Lorem.sentence(10),
-            :message => Faker::Lorem.paragraph(50),
+            :message => '<p>' + Faker::Lorem.paragraph(10) + '</p>' +
+            '<p>' + Faker::Lorem.paragraph(5) + '</p>' +
+            '<p>' + Faker::Lorem.paragraph(7) + '</p>',
             :instance => '2012-01-01T00:00:00',
             :url => "blog_url_#{n}"}
       user.blogs.create!(blog_attr)

@@ -32,12 +32,6 @@ Rtdash::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
-  #resources :blog
-  match '/blog',                  :to => 'blog#index'
-  match "/blog/:id",              :to => 'blog#show'
-  match '/blog/previous/:offset', :to => 'blog#previous'
-  match '/blog/next/:offset',     :to => 'blog#next'
-
   # TODO: this is a temp route until the final arq is figured out.
   match '/chat/message',        :to => 'chat#message'
 
@@ -52,6 +46,13 @@ Rtdash::Application.routes.draw do
   match '/support',             :to => 'pages#support'
   match '/press',               :to => 'pages#press'
   match '/company',             :to => 'pages#company'
+
+  #resources :blog
+  match '/blog',                              :to => 'blog#index'
+  match "/blog/:id",                          :to => 'blog#show'
+  match '/blog/:year/:month/:day/:url',       :to => 'blog#show_by_url'
+  match '/blog/previous/:offset',             :to => 'blog#previous'
+  match '/blog/next/:offset',                 :to => 'blog#next'
 
   root                          :to => 'pages#home'
 end

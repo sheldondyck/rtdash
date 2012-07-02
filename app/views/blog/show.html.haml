@@ -1,12 +1,4 @@
 = render 'pages/site_menu'
 .container
-  .row
-    .span9
-      %h2= @blog.id.to_s + ': ' + @blog.title
-      %p= @blog.message
-    .span3
-      %h3 Previous Posts
-      %ol
-      - @prev_blog.each do |p|
-        %li= link_to p.id.to_s + ': ' + p.title, blog_path(p.id)
+  = render 'blog'
 = render 'pages/footer'

@@ -3,7 +3,7 @@
     - @blogs.each do |blog|
       .hero-unit
         %h2= link_to blog.id.to_s + ': ' + blog.title, blog_path(blog.id)
-        %p= blog.message
+        %p= raw(blog.message)
         -#%p= blog.to_json
     .row
       - if @show_previous_blog then

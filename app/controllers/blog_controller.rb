@@ -37,12 +37,29 @@ class BlogController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
-    @prev_blog = Blog.last(BLOG_PREVIOUS_LIST_COUNT + 1).reverse
-    @prev_blog.delete(@blog)
-    @prev_blog = @prev_blog.first(BLOG_PREVIOUS_LIST_COUNT)
     @title = 'Blog - ' + @blog.title
+
+    previous_list
+  end
+
+  def show_by_url
+    year = "%04d" % params[:year]
+    month = "%02d" % params[:month]
+    day = "%02d" % params[:day]
+    url = params[:url]
+    @blog = Blog.find_by_instance_and_url("#{year}-#{month}-#{day} 00:00:00.000000", url)
+    @title = 'Blog - ' + @blog.title
+
+    previous_list
   end
 
   def destroy
   end
+
+  private
+    def previous_list
+      @prev_blog = Blog.last(BLOG_PREVIOUS_LIST_COUNT + 1).reverse
+      @prev_blog.delete(@blog)
+      @prev_blog = @prev_blog.first(BLOG_PREVIOUS_LIST_COUNT)
+    end
 end
