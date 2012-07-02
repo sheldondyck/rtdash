@@ -11,7 +11,9 @@ describe BlogController do
     @sys_user = FactoryGirl.create(:system_user)
 
     30.times do |n|
-      @sys_user.blogs.create! @attr.merge(:title => "Blog Title #{n + 1}")
+      @sys_user.blogs.create! @attr.merge(:title => "Blog Title #{n + 1}",
+                                          :instance => "2012-01-#{n+1}T00:00:00",
+                                          :url => "blog_url_#{n + 1}")
     end
 
     @blog = @sys_user.blogs.first
@@ -39,7 +41,7 @@ describe BlogController do
     it "should have the right title" do
       get :show, :id => @blog
       response.should have_selector("title",
-                    :content => "Real Time Dashboard | Blog - Blog Title")
+                    :content => "Real Time Dashboard | Blog - Blog Title 1")
     end
 
     it "should have the right blog title" do
@@ -66,6 +68,19 @@ describe BlogController do
       get :show, :id => @blog_last.id
       response.should_not have_selector("li",
                     :content => @blog_last.title)
+    end
+  end
+
+  describe "GET 'show_by_url'" do
+    it "should be successful" do
+      get :show_by_url, :year => 2012, :month => 1, :day => 1, :url => 'blog_url_1'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get :show_by_url, :year => 2012, :month => 1, :day => 2, :url => 'blog_url_2'
+      response.should have_selector("title",
+                    :content => "Real Time Dashboard | Blog - Blog Title 2")
     end
   end
 

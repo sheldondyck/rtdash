@@ -22,12 +22,12 @@ end
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
-  gem 'spork'
+  gem 'spork-rails'
   gem 'libnotify'
   gem 'guard'
-  gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 end
 
 group :test do
