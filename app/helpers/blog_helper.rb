@@ -3,6 +3,11 @@ module BlogHelper
     "/blog/#{id}"
   end
 
+  def blog_friendly_path(instance, url)
+#    dt = Date.parse(instance)
+    "/blog/#{url}"
+  end
+
   def previous_blog_path(count)
     "/blog/previous/#{count}"
   end

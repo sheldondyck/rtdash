@@ -7,6 +7,7 @@
 #  instance       :datetime         not null
 #  title          :string(255)      not null
 #  message        :string(255)      not null
+#  url            :string(255)      not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #

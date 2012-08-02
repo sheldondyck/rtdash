@@ -2,7 +2,7 @@
   .span9
     - @blogs.each do |blog|
       .hero-unit
-        %h2= link_to blog.id.to_s + ': ' + blog.title, blog_path(blog.id)
+        %h2= link_to blog.id.to_s + ': ' + blog.title, blog_friendly_path(blog.instance, blog.url)
         %p= raw(blog.message)
         -#%p= blog.to_json
     .row
