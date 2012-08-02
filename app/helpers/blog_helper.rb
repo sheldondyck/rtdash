@@ -4,7 +4,7 @@ module BlogHelper
   end
 
   def blog_friendly_path(instance, url)
-#    dt = DateTime.new(instance) 
+#    dt = Date.parse(instance)
     "/blog/#{url}"
   end
 
