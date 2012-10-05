@@ -19,11 +19,11 @@ class Blog < ActiveRecord::Base
 
   validates :system_user_id,    :presence => true
   validates :title,             :presence => true,
-                                :length => { :minimum => 2}
+                                :length => { :minimum => 2 }
   validates :message,           :presence => true,
-                                :length => { :minimum => 2}
+                                :length => { :minimum => 2 }
   validates :url,               :presence => true,
-                                :length => { :minimum => 2}
+                                :length => { :minimum => 2 }
 
   attr_accessible :title, :message, :instance, :url
 end
