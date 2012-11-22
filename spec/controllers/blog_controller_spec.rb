@@ -27,8 +27,8 @@ describe BlogController do
 
     it "should have the right title" do
       get :index
-      response.should have_selector("title",
-                    :content => "Real Time Dashboard | Blog")
+      response.body.should have_selector("head title",
+                    :text => "Real Time Dashboard | Blog")
     end
   end
 
