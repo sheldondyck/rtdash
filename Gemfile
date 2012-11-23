@@ -23,12 +23,19 @@ group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'spork-rails'
-  gem 'libnotify'
-  gem 'rb-inotify', '~> 0.8.8'
   gem 'guard'
   gem 'guard-spork'
   gem 'guard-rspec'
+  gem 'libnotify'
   gem 'annotate' #, :git => 'git://github.com/ctran/annotate_models.git'
+end
+
+group :linux_development do
+  gem 'rb-inotify'
+end
+
+group :mac_development do
+  gem 'rb-fsevent'
 end
 
 group :test do
