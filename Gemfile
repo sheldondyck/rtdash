@@ -45,7 +45,6 @@ group :test do
   # Pretty printed test output
   gem 'turn', '>= 0.8.3', :require => false
   gem 'rspec-rails'
-  #gem 'webrat'
   gem 'factory_girl_rails'
   gem 'capybara'
 end
