@@ -40,34 +40,34 @@ describe BlogController do
 
     it "should have the right title" do
       get :show, :id => @blog
-      response.should have_selector("title",
-                    :content => "Real Time Dashboard | Blog - Blog Title 1")
+      response.body.should have_selector("head title",
+                    :text => "Real Time Dashboard | Blog - Blog Title 1")
     end
 
     it "should have the right blog title" do
       get :show, :id => @blog
-      response.should have_selector("h2",
-                    :content => @blog.title)
+      response.body.should have_selector("h2",
+                    :text => @blog.title)
     end
 
     it "should have the right blog content" do
       get :show, :id => @blog
-      response.should have_selector("p",
-                    :content => @blog.message)
+      response.body.should have_selector("p",
+                    :text => @blog.message)
     end
 
     it "should have the right previous content" do
       get :show, :id => @blog
       @blog_last = Blog.last
-      response.should have_selector("li",
-                    :content => @blog_last.title)
+      response.body.should have_selector("li",
+                    :text => @blog_last.title)
     end
 
     it "previous content should not have current post" do
       @blog_last = Blog.last
       get :show, :id => @blog_last.id
-      response.should_not have_selector("li",
-                    :content => @blog_last.title)
+      response.body.should_not have_selector("li",
+                    :text => @blog_last.title)
     end
   end
 
@@ -79,8 +79,8 @@ describe BlogController do
 
     it "should have the right title" do
       get :show_by_url, :year => 2012, :month => 1, :day => 2, :url => 'blog_url_2'
-      response.should have_selector("title",
-                    :content => "Real Time Dashboard | Blog - Blog Title 2")
+      response.body.should have_selector("title",
+                    :text => "Real Time Dashboard | Blog - Blog Title 2")
     end
   end
 
@@ -92,20 +92,20 @@ describe BlogController do
 
     it "should be successful" do
       get :previous, :offset => 10
-      response.should have_selector("h2",
-                    :content => "Blog Title 20")
+      response.body.should have_selector("h2",
+                    :text => "Blog Title 20")
     end
 
     it "should be successful" do
       get :previous, :offset => 20
-      response.should have_selector("h2",
-                    :content => "Blog Title 10")
+      response.body.should have_selector("h2",
+                    :text => "Blog Title 10")
     end
 
     it "should be successful" do
       get :previous, :offset => 30
-      response.should have_selector("h2",
-                    :content => "Blog Title 1")
+      response.body.should have_selector("h2",
+                    :text => "Blog Title 1")
     end
   end
 
@@ -117,8 +117,8 @@ describe BlogController do
 
     it "should be successful" do
       get :next, :offset => 30
-      response.should have_selector("h2",
-                    :content => "Blog Title 20")
+      response.body.should have_selector("h2",
+                    :text => "Blog Title 20")
     end
   end
 end

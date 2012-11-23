@@ -28,7 +28,7 @@ describe UsersController do
 
     it "should have the right title" do
       get 'new'
-      response.should have_selector("title", :content => "Sign Up")
+      response.body.should have_selector("title", :text => "Sign Up")
     end
   end
 
@@ -48,7 +48,7 @@ describe UsersController do
       
       it "should have the right title" do
         post :create, :user => @attr
-        response.should have_selector("title", :content => "Sign up")
+        response.body.should have_selector("title", :text => "Sign up")
       end
           
       it "should render the 'new' page" do
@@ -58,7 +58,7 @@ describe UsersController do
 
       it "should show a alert message" do
         post :create, :user => @attr
-        response.should have_selector("div", :class => "alert alert-error")
+        response.body.should have_selector("div.alert-error")
       end
     end
 
