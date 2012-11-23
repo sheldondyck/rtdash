@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'capybara/rspec'
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However, 
@@ -38,6 +39,8 @@ Spork.prefork do
     # automatically. This will be the default behavior in future versions of
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
+
+    config.include Capybara::DSL
 
     def test_sign_in(user)
       controller.sign_in(user)

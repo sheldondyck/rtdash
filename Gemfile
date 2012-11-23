@@ -28,6 +28,8 @@ group :development do
   gem 'guard-rspec'
   gem 'libnotify'
   gem 'annotate' #, :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :linux_development do
@@ -43,8 +45,9 @@ group :test do
   # Pretty printed test output
   gem 'turn', '>= 0.8.3', :require => false
   gem 'rspec-rails'
-  gem 'webrat'
+  #gem 'webrat'
   gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 group :assets do
