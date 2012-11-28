@@ -17,6 +17,11 @@ gem 'foreigner'
 
 group :production do
   gem 'pg'
+  # Use unicorn as the web server
+  # gem 'unicorn'
+
+  # Deploy with Capistrano
+  # gem 'capistrano'
 end
 
 group :development do
@@ -30,6 +35,8 @@ group :development do
   gem 'annotate' #, :git => 'git://github.com/ctran/annotate_models.git'
   gem 'capybara'
   gem 'launchy'
+  # To use debugger
+  # gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :linux_development do
@@ -54,13 +61,4 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
