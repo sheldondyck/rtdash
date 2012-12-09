@@ -8,6 +8,7 @@ gem 'rails', '3.2.9'
 gem 'faye'
 #gem 'thin'
 
+gem "libv8"
 gem 'therubyracer'
 gem 'haml'
 gem 'faker'
@@ -35,6 +36,7 @@ group :development do
   gem 'annotate' #, :git => 'git://github.com/ctran/annotate_models.git'
   gem 'capybara'
   gem 'launchy'
+  gem "better_errors"
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
 end
