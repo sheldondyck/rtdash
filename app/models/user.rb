@@ -11,7 +11,7 @@
 #  updated_at         :datetime         not null
 #
 
-require 'digest'
+require 'bcrypt'
 
 class User < ActiveRecord::Base
   has_many :chats, :dependent => :delete_all
@@ -32,11 +32,14 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   def has_password?(submitted_password)
-    encrypted_password == encrypt(submitted_password)
+    logger.debug "DEBUG has_password pass: #{submitted_password} db_pass: #{encrypted_password} gen_pass: #{BCrypt::Password.new(encrypted_password)}"
+    db_password = BCrypt::Password.new(encrypted_password)
+    db_password == submitted_password
   end
 
   def self.authenticate(email, submitted_password)
     user = find_by_email(email)
+    logger.debug "DEBUG UserModel authenticate"
     return nil if user.nil?
     return user if user.has_password?(submitted_password)
   end
@@ -57,11 +60,14 @@ class User < ActiveRecord::Base
     end
 
     def make_salt
-      secure_hash("#{rand 999999999}")
+      BCrypt::Engine.generate_salt
+      #secure_hash("#{rand 999999999}")
     end
 
     def secure_hash(value)
-      # TODO: start to use bcrypt
-      Digest::SHA2.hexdigest(value)
+      logger.debug "DEBUG secure_hash #{value}"
+      BCrypt::Password.create(value)
+      logger.debug "DEBUG secure_hash encrypt #{BCrypt::Password.create(value)}"
+      #Digest::SHA2.hexdigest(value)
     end
 end

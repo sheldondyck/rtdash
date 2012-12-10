@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    logger.debug "DEBUG UserController show"
     @title = "User " + @user.name
     # TODO: problably very inefficient
     @chat = @user.chats.order(:instant).reverse

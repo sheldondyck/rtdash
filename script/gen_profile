@@ -1,0 +1,5 @@
+#!/bin/sh
+
+CPUPROFILE=profiled RUBYOPT="-r`gem which perftools | tail -1`" rspec ../spec/
+pprof.rb --text profiled > profiled.txt
+pprof.rb --gif profiled > profiled.gif

@@ -1,6 +1,11 @@
 require 'rubygems'
 require 'spork'
 require 'capybara/rspec'
+require 'bcrypt'
+
+#Kernel.silence_warnings {
+  BCrypt::Engine::DEFAULT_COST = 1
+#}
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However, 
@@ -16,6 +21,8 @@ Spork.prefork do
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+
+  #BCrypt::Engine::DEFAULT_COST = 1
 
   RSpec.configure do |config|
     # == Mock Framework

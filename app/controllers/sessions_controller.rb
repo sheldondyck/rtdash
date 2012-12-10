@@ -5,9 +5,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+    logger.debug "DEBUG SessionController create"
     user = User.authenticate(params[:session][:email], 
                              params[:session][:password])
 
+    logger.debug "DEBUG SessionController user #{user.to_yaml}"
     if user.nil?
       flash.now[:error] = "Invalid email or password"
       @title = "Login"

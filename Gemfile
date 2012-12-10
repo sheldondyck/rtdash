@@ -8,6 +8,7 @@ gem 'rails', '3.2.9'
 gem 'faye'
 #gem 'thin'
 
+gem 'libv8'
 gem 'therubyracer'
 gem 'haml'
 gem 'faker'
@@ -30,6 +31,7 @@ group :development do
   gem 'annotate' #, :git => 'git://github.com/ctran/annotate_models.git'
   gem 'capybara'
   gem 'launchy'
+  gem 'perftools.rb'
 end
 
 group :linux_development do
