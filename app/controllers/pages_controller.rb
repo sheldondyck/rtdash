@@ -12,6 +12,7 @@ class PagesController < ApplicationController
     @sub_p_0 = @latin.paragraph(3)
     @sub_p_1 = @latin.paragraph(3)
     @sub_p_2 = @latin.paragraph(3)
+    #raise 'opppssss!!!'
   end
 
   def features
