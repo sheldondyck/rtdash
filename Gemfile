@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -8,8 +8,7 @@ gem 'rails', '3.2.12'
 gem 'faye'
 #gem 'thin'
 
-gem "libv8"
-gem 'therubyracer'
+gem 'therubyracer', :require => "libv8"
 gem 'haml'
 gem 'faker'
 gem 'jquery-rails'
