@@ -37,6 +37,7 @@ group :development do
   gem 'launchy'
   gem "better_errors"
   gem "binding_of_caller"
+  gem "meta_request"
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
 end
