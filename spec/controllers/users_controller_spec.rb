@@ -28,7 +28,7 @@ describe UsersController do
 
     it "should have the right title" do
       get 'new'
-      response.body.should have_selector("title", :text => "Sign Up")
+      response.body.should have_title("Sign Up")
     end
   end
 
@@ -48,7 +48,7 @@ describe UsersController do
       
       it "should have the right title" do
         post :create, :user => @attr
-        response.body.should have_selector("title", :text => "Sign up")
+        response.body.should have_title("Sign up")
       end
           
       it "should render the 'new' page" do

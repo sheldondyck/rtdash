@@ -11,8 +11,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'home'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | Home")
+      response.body.should have_title("Real Time Dashboard | Home")
       end
   end
 
@@ -24,8 +23,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'features'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | Features")
+      response.body.should have_title("Real Time Dashboard | Features")
       end
   end
 
@@ -37,8 +35,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'how_does_it_work'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | How does it work?")
+      response.body.should have_title("Real Time Dashboard | How does it work?")
       end
   end
 
@@ -50,8 +47,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'price'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | Price")
+      response.body.should have_title("Real Time Dashboard | Price")
       end
   end
 
@@ -63,8 +59,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'support'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | Support")
+      response.body.should have_title("Real Time Dashboard | Support")
       end
   end
 
@@ -76,8 +71,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'press'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | Press")
+      response.body.should have_title("Real Time Dashboard | Press")
       end
   end
 
@@ -89,8 +83,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'company'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | Company")
+      response.body.should have_title("Real Time Dashboard | Company")
       end
   end
 end

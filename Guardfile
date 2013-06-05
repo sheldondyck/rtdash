@@ -2,7 +2,7 @@
 # More info at https://github.com/guard/guard#readme
 
 notification :libnotify,
-             :timeout => 1,
+             :timeout => 5,
              :urgency => :normal,
              :append => true,
              :transient => false

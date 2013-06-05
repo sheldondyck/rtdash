@@ -26,9 +26,9 @@ describe BlogController do
     end
 
     it "should have the right title" do
-      get :index
-      response.body.should have_selector("head title",
-                    :text => "Real Time Dashboard | Blog")
+      visit blog_path
+      #save_and_open_page
+      page.should have_title('Real Time Dashboard | Blog')
     end
   end
 
@@ -40,8 +40,7 @@ describe BlogController do
 
     it "should have the right title" do
       get :show, :id => @blog
-      response.body.should have_selector("head title",
-                    :text => "Real Time Dashboard | Blog - Blog Title 1")
+      response.body.should have_title("Real Time Dashboard | Blog - Blog Title 1")
     end
 
     it "should have the right blog title" do
@@ -79,8 +78,7 @@ describe BlogController do
 
     it "should have the right title" do
       get :show_by_url, :year => 2012, :month => 1, :day => 2, :url => 'blog_url_2'
-      response.body.should have_selector("title",
-                    :text => "Real Time Dashboard | Blog - Blog Title 2")
+      response.body.should have_title("Real Time Dashboard | Blog - Blog Title 2")
     end
   end
 

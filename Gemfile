@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+#gem 'rails', '4.0.0rc1'
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -52,7 +53,6 @@ end
 
 group :test do
   gem 'sqlite3'
-  # Pretty printed test output
   gem 'turn', '>= 0.8.3', :require => false
   gem 'rspec-rails'
   gem 'factory_girl_rails'
@@ -60,8 +60,8 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 

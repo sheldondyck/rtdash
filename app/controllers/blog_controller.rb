@@ -36,9 +36,12 @@ class BlogController < ApplicationController
   end
 
   def show
-    @blog = Blog.find(params[:id])
+    if params[:id] =~ /\A[0-9]+\Z/ then
+      @blog = Blog.find(params[:id])
+    else
+      @blog = Blog.find_by_url(params[:id])
+    end
     @title = 'Blog - ' + @blog.title
-
     previous_list
   end
 
