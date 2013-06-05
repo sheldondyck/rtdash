@@ -1,7 +1,7 @@
 ---
 development:
   foo: bar
-  SECRET_TOKEN: 40ccafd937612257c892b0d8a6cbe3473b1b1eb04f4a9db6fa98a5f5669a
+  SECRET_TOKEN: c68fa9e80379e1c642b81023e1843adfc28e47c606183ff4f5dea5adb250
 test:
   foo: bar
 production:
