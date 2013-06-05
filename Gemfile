@@ -1,20 +1,27 @@
 source 'http://rubygems.org'
 
-#gem 'rails', '4.0.0rc1'
-gem 'rails', '3.2.13'
-
-# Bundle edge Rails instead:
+gem 'rails', '4.0.0.rc1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'faye'
 #gem 'thin'
 
-gem 'therubyracer', :require => "libv8"
+#gem 'libv8'
+#gem 'libv8', '~> 3.16.14.1'
+gem 'therubyracer', require: 'libv8'
 gem 'haml'
 gem 'faker'
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'foreigner'
+
+gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+
+# rails 4.0 upgrade gems
+gem 'protected_attributes'
+gem 'rails-observers'
 
 group :production do
   gem 'pg'
@@ -28,9 +35,8 @@ end
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
-  gem 'spork-rails'
   gem 'guard'
-  gem 'guard-spork'
+  gem 'guard-zeus'
   gem 'guard-rspec'
   gem 'libnotify'
   gem 'annotate' #, :git => 'git://github.com/ctran/annotate_models.git'
@@ -58,10 +64,3 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
 end
-
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-end
-

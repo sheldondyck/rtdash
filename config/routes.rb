@@ -33,26 +33,26 @@ Rtdash::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
 
   # TODO: this is a temp route until the final arq is figured out.
-  match '/chat/message',        :to => 'chat#message'
+  get '/chat/message',        :to => 'chat#message'
 
-  match '/signup',              :to => 'users#new'
-  match '/login',               :to => 'sessions#new'
-  match '/logout',              :to => 'sessions#destroy'
+  get '/signup',              :to => 'users#new'
+  get '/login',               :to => 'sessions#new'
+  match '/logout',            :to => 'sessions#destroy', via: [:get, :delete]
 
-  match '/home',                :to => 'pages#home'
-  match '/features',            :to => 'pages#features'
-  match '/how_does_it_work',    :to => 'pages#how_does_it_work'
-  match '/price',               :to => 'pages#price'
-  match '/support',             :to => 'pages#support'
-  match '/press',               :to => 'pages#press'
-  match '/company',             :to => 'pages#company'
+  get '/home',                :to => 'pages#home'
+  get '/features',            :to => 'pages#features'
+  get '/how_does_it_work',    :to => 'pages#how_does_it_work'
+  get '/price',               :to => 'pages#price'
+  get '/support',             :to => 'pages#support'
+  get '/press',               :to => 'pages#press'
+  get '/company',             :to => 'pages#company'
 
   #resources :blog
-  match '/blog',                              :to => 'blog#index'
-  match "/blog/:id",                          :to => 'blog#show'
-  match '/blog/:year/:month/:day/:url',       :to => 'blog#show_by_url'
-  match '/blog/previous/:offset',             :to => 'blog#previous'
-  match '/blog/next/:offset',                 :to => 'blog#next'
+  get '/blog',                              :to => 'blog#index'
+  get "/blog/:id",                          :to => 'blog#show'
+  get '/blog/:year/:month/:day/:url',       :to => 'blog#show_by_url'
+  get '/blog/previous/:offset',             :to => 'blog#previous'
+  get '/blog/next/:offset',                 :to => 'blog#next'
 
   root                          :to => 'pages#home'
 end

@@ -4,6 +4,7 @@ describe BlogController do
   render_views
 
   before(:each) do
+
     @attr = {:title => "Blog Title",
       :message => "Blog message.",
       :instance => '2012-01-01T00:00:00',

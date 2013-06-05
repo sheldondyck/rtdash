@@ -21,4 +21,7 @@ if ENV["SECRET_TOKEN"].blank?
   end
 end
 
+# TODO remove secret_token rails 4 only uses key_base
 Rtdash::Application.config.secret_token = ENV["SECRET_TOKEN"]
+# TODO need to added secret_key_base to config.yml
+Rtdash::Application.config.secret_key_base = "a8b23985eacceb4a6677ca85bc3d4af15a1426fe85b047373b32c9ade841"
