@@ -17,7 +17,7 @@ if ENV["SECRET_TOKEN"].blank?
     config = YAML.load_file(config_file)
     # Generate the key, set it for the current environment, update the yaml file and move on
     ENV["SECRET_TOKEN"] = config[Rails.env]['SECRET_TOKEN'] = SecureRandom.hex(30)
-    File.open(config_file, 'w') { |file| file.write(config.to_yaml) }
+    #File.open(config_file, 'w') { |file| file.write(config.to_yaml) }
   end
 end
 
