@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0.rc2'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'faye'
@@ -46,6 +46,8 @@ group :development do
   gem "binding_of_caller"
   gem "meta_request"
   # To use debugger
+  #gem 'ruby-debug'
+  gem 'debugger'
   # gem 'ruby-debug19', :require => 'ruby-debug'
 end
 

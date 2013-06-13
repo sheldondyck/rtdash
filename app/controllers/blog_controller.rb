@@ -9,6 +9,7 @@ class BlogController < ApplicationController
   end
 
   def index
+    #debugger
     @title = 'Blog'
     @blogs = Blog.last(BLOG_LIST_COUNT).reverse
     @offset = BLOG_LIST_COUNT
